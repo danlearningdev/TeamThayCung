@@ -4,415 +4,889 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TeamThayCungWebsite</title>
+  <meta name="description"
+    content="Team Thầy Cúng / Exorcist Studio - Vietnamese boardgame design studio. Official home of Âm Binh: The Spirit Wardens.">
+  <meta name="theme-color" content="#8B0000">
+  <title>Team Thầy Cúng | Exorcist Studio – Âm Binh: The Spirit Wardens</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Noto+Serif:ital,wght@0,400;0,600;1,400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js" defer></script>
 </head>
 
 <body>
+  <!-- ══════════════════════════════════════════════════════════════════ VISUAL EFFECTS ══════ -->
+  <canvas id="spirit-canvas" aria-hidden="true"></canvas>
+  <canvas id="ember-canvas" aria-hidden="true"></canvas>
 
-  <!-- ═══ CUSTOM CURSOR ══════════════════════════════════════ -->
-  <canvas id="spirit-canvas"></canvas>
-  <div id="cursor-dot"></div>
-  <div id="cursor-ring"></div>
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
 
-  <!-- ═══ EMBER PARTICLES ════════════════════════════════════ -->
-  <canvas id="ember-canvas"></canvas>
-
-  <!-- ═══ LIGHTBOX ══════════════════════════════════════════ -->
-  <div id="lightbox">
-    <div id="lightbox-close">✕</div>
-    <img id="lightbox-img" src="" alt="">
-    <p id="lightbox-caption"></p>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════ NAV -->
-  <nav id="main-nav">
-    <a href="#" class="nav-logo">
-      <span class="sigil">⚔</span>
-      Team Thầy Cúng
-    </a>
-    <ul class="nav-links">
-      <li><a href="#about">Về Chúng Tôi</a></li>
-      <li><a href="#achievements">Thành Tựu</a></li>
-      <li><a href="#featured">Dự Án</a></li>
-      <li><a href="#contact">Liên Hệ</a></li>
-    </ul>
-  </nav>
-
-  <!-- ═══════════════════════════════════════════════ HERO -->
-  <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-image-placeholder">魂</div>
-    <div class="fog-layer"></div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">RMIT University · Boardgame Design Team</p>
-      <h1 class="hero-title">Team Thầy<br><span>Cúng</span></h1>
-      <p class="hero-subtitle">Nơi Linh Hồn Việt Gặp Gỡ Trên Bàn Cờ</p>
-      <p class="hero-desc">
-        Chúng tôi là đội ngũ thiết kế boardgame từ RMIT University - nơi văn hoá tâm linh Việt Nam
-        được thổi hồn vào từng quân bài, từng mechanic, từng khoảnh khắc chơi game.
-      </p>
-      <div class="hero-ctas">
-        <a href="#featured" class="btn-primary">Khám Phá Dự Án</a>
-        <a href="#about" class="btn-outline">Đội Ngũ Chúng Tôi</a>
-      </div>
+  <!-- ══════════════════════════════════════════════════════════════════ LIGHTBOX ══════ -->
+  <dialog id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <button id="lightbox-close" class="lightbox-close" aria-label="Close lightbox">✕</button>
+      <img id="lightbox-img" src="" alt="">
+      <p id="lightbox-caption" class="lightbox-caption"></p>
     </div>
-    <div class="scroll-hint">Cuộn xuống</div>
-  </section>
+  </dialog>
 
-  <!-- ═══════════════════════════════════════════════ ACHIEVEMENTS -->
-  <section id="achievements">
-    <div class="section-inner">
-      <div class="section-header reveal">
-        <span class="section-tag">Thành Tựu</span>
-        <h2 class="section-title">Hành Trình Của Chúng Tôi</h2>
-        <div class="section-rule"><span>✦</span></div>
-      </div>
-      <div class="achievements-grid">
-        <div class="achievement-card reveal reveal-delay-1">
-          <span class="achievement-icon">🏆</span>
-          <p class="achievement-year">2025</p>
-          <h3 class="achievement-title">Vô Địch RMIT Gamejam 2025</h3>
-          <p class="achievement-desc">Giải Game Điện Tử Xuất Sắc Nhất tại cuộc thi Gamejam thường niên của RMIT
-            University.</p>
-        </div>
-        <div class="achievement-card reveal reveal-delay-2">
-          <span class="achievement-icon">🎴</span>
-          <p class="achievement-year">2025</p>
-          <h3 class="achievement-title">Road To Essen 2025 - Boardgame Được Yêu Thích Nhất</h3>
-          <p class="achievement-desc">Âm Binh giành giải Boardgame được yêu thích nhất Việt Nam tại cuộc thi Road To
-            Essen danh giá.</p>
-        </div>
-        <div class="achievement-card reveal reveal-delay-3">
-          <span class="achievement-icon">🤝</span>
-          <p class="achievement-year">2025</p>
-          <h3 class="achievement-title">Hợp Tác Thương Mại với Everjoy Publishing</h3>
-          <p class="achievement-desc">Boardgame Âm Binh chính thức được ký kết hợp tác thương mại với nhà phát hành
-            Everjoy Publishing.</p>
-        </div>
-        <div class="achievement-card reveal reveal-delay-1">
-          <span class="achievement-icon">🎮</span>
-          <p class="achievement-year">Viral</p>
-          <h3 class="achievement-title">Dear Ancestor - Thưa Gia Tiên</h3>
-          <p class="achievement-desc">Game điện tử về văn hoá thờ cúng tổ tiên Việt Nam lan truyền rộng rãi trên cộng
-            đồng game thủ.</p>
-        </div>
-        <div class="achievement-card reveal reveal-delay-2">
-          <span class="achievement-icon">🖼️</span>
-          <p class="achievement-year">RMIT</p>
-          <h3 class="achievement-title">5 Sản Phẩm Xuất Sắc Được Trưng Bày tại RMIT</h3>
-          <p class="achievement-desc">Năm sản phẩm nổi bật của đội được lựa chọn trưng bày chính thức tại khuôn viên
-            RMIT University.</p>
-        </div>
-        <div class="achievement-card reveal reveal-delay-3">
-          <span class="achievement-icon">📱</span>
-          <p class="achievement-year">Sắp Ra Mắt</p>
-          <h3 class="achievement-title">Digital Boardgame Âm Binh</h3>
-          <p class="achievement-desc">Phiên bản digital của Âm Binh đang trong quá trình phát triển, sẵn sàng chinh phục
-            thị trường game toàn cầu.</p>
+  <!-- ══════════════════════════════════════════════════════════════════ HEADER / NAV ══════ -->
+  <header id="site-header">
+    <nav id="main-nav" class="nav-main">
+      <a href="#home" class="nav-logo">
+        <span class="sigil">⚔</span>
+        <span class="logo-text">Team Thầy Cúng</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+        aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul id="nav-menu" class="nav-links">
+        <li><a href="#home">Trang Chủ</a></li>
+        <li><a href="#about-studio">Về Chúng Tôi</a></li>
+        <li><a href="#achievements">Thành Tựu</a></li>
+        <li><a href="#am-binh">Âm Binh</a></li>
+        <li><a href="#presskit">Press Kit</a></li>
+        <li><a href="#team">Đội Ngũ</a></li>
+        <li><a href="#contact">Liên Hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ══════════════════════════════════════════════════════════════════ HERO ══════ -->
+    <section id="home" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-image-placeholder">魂</div>
+      <div class="fog-layer"></div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal">RMIT University · Boardgame Design Studio</p>
+        <h1 class="hero-title reveal">Team<br><span>Thầy Cúng</span></h1>
+        <p class="hero-subtitle reveal">Vietnamese Folklore Boardgame Studio</p>
+        <p class="hero-desc reveal">
+          We are Exorcist Studio, a game design team from RMIT University. We create strategic boardgames and digital
+          experiences rooted in Vietnamese supernatural folklore, rituals, and spiritual culture. Every game is a séance,
+          every decision is a prayer.
+        </p>
+        <div class="hero-ctas reveal">
+          <a href="#am-binh" class="btn-primary">Explore Âm Binh</a>
+          <a href="#presskit" class="btn-outline">View Press Kit</a>
+          <a href="#contact" class="btn-outline">Contact</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <hr class="divider">
+      <div class="scroll-hint">Cuộn xuống</div>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════ FEATURED -->
-  <section id="featured">
-    <div class="section-inner">
-      <div class="featured-wrapper">
-        <div class="featured-image reveal">
-          <div class="lightbox-trigger" data-caption="Âm Binh – The Spirit Wardens">
-            <img src="cover-am-binh.jpg" alt="Âm Binh"
-              onerror="this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='flex';">
-          </div>
-          <div class="img-placeholder">
-            <span class="img-placeholder-icon">🎴</span>
-            <span>Cover Image<br>Âm Binh</span>
-          </div>
-          <div class="featured-corner"></div>
-          <div class="featured-corner br"></div>
+    <!-- ══════════════════════════════════════════════════════════════════ ABOUT STUDIO ══════ -->
+    <section id="about-studio" class="section-container">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-tag">✦ Về Chúng Tôi</span>
+          <h2 class="section-title">Team Thầy Cúng / Exorcist Studio</h2>
+          <div class="section-rule"></div>
         </div>
 
-        <div class="featured-info reveal reveal-delay-2">
-          <p class="featured-label">✦ Dự Án Chủ Lực</p>
-          <h2 class="featured-title">Âm Binh</h2>
-          <p class="featured-title-vn">The Spirit Wardens</p>
-          <p class="featured-desc">
-            Âm Binh là boardgame chiến thuật lấy cảm hứng từ văn hoá tâm linh Việt Nam - nơi người chơi
-            điều khiển các binh âm để bảo vệ hoặc tranh đoạt lãnh địa trong thế giới linh hồn.
-            Mỗi ván đấu là một nghi lễ, mỗi quyết định là một lời khấn nguyện.
-          </p>
-          <div class="featured-stats">
-            <div class="stat">
-              <span class="stat-value">3–6</span>
-              <span class="stat-label">Người Chơi</span>
+        <div class="studio-content reveal">
+          <div class="studio-text">
+            <h3>Who We Are</h3>
+            <p>
+              Team Thầy Cúng (Exorcist Studio) is a Vietnamese boardgame design studio dedicated to creating games that
+              celebrate and explore Vietnamese spiritual culture, folklore, and rituals.
+            </p>
+
+            <h3>Our Mission</h3>
+            <p>
+              We bring Vietnamese spiritual heritage closer to the world through immersive tabletop and digital games.
+              We believe folklore is not just history-it's an endless source of storytelling, strategy, and human
+              connection. Through our games, we honor ancestral traditions while creating modern, engaging experiences.
+            </p>
+
+            <h3>Our Vision</h3>
+            <p>
+              To establish Vietnamese boardgame design as a distinctive voice in the global gaming industry, rooted in
+              authentic cultural narratives and ritual aesthetics. We aspire to export Vietnamese spiritual worldviews
+              through games that are mechanically rich, narratively deep, and culturally resonant.
+            </p>
+
+            <p><strong>Based at:</strong> RMIT University Vietnam<br>
+              <strong>Founded:</strong> 2025<br>
+              <strong>Studio Size:</strong> Core team of 4 passionate designers and creators
+            </p>
+          </div>
+
+          <div class="studio-highlights">
+            <div class="highlight-card">
+              <span class="highlight-icon">🎲</span>
+              <h4>Strategic Design</h4>
+              <p>Complex, rewarding mechanics rooted in Vietnamese cultural symbolism.</p>
             </div>
-            <div class="stat">
-              <span class="stat-value">45–90</span>
-              <span class="stat-label">Phút</span>
+            <div class="highlight-card">
+              <span class="highlight-icon">🌙</span>
+              <h4>Folklore-First</h4>
+              <p>Authentic cultural narratives, not shallow aesthetics.</p>
             </div>
-            <div class="stat">
-              <span class="stat-value">14+</span>
-              <span class="stat-label">Tuổi</span>
+            <div class="highlight-card">
+              <span class="highlight-icon">🤝</span>
+              <h4>Community-Driven</h4>
+              <p>Games designed to bring people together through shared ritual and story.</p>
             </div>
-          </div>
-          <div class="tag-list">
-            <span class="tag">Chiến Thuật</span>
-            <span class="tag">Tâm Linh Việt Nam</span>
-            <span class="tag">Card Game</span>
-            <span class="tag">Area Control</span>
-            <span class="tag">Everjoy Publishing</span>
-          </div>
-          <a href="#contact" class="btn-primary">Tìm Hiểu Thêm →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ═══════════════════════════════════════════════ TEAM -->
-  <section id="about">
-    <div class="section-inner">
-      <div class="section-header reveal">
-        <span class="section-tag">Đội Ngũ</span>
-        <h2 class="section-title">Những Người Đứng Sau Bóng Tối</h2>
-        <div class="section-rule"><span>✦</span></div>
-      </div>
-
-      <div class="studio-description reveal">
-        <h3>Về Team Thầy Cúng</h3>
-        <p>Team Thầy Cúng là studio game Việt Nam chuyên phát triển các tựa game lấy cảm hứng sâu sắc từ văn hóa tâm
-          linh và truyền thuyết dân gian Việt Nam.</p>
-        <p><strong>Sứ mệnh:</strong> Mang văn hóa tâm linh Việt Nam trở nên phổ biến, gần gũi và hấp dẫn với người Việt,
-          đặc biệt là thế hệ trẻ, thông qua trải nghiệm game chất lượng cao. Đồng thời, chúng tôi hướng tới xuất khẩu
-          văn hóa tâm linh Việt Nam ra thế giới bằng cách biến những câu chuyện ma quỷ, pháp sư, bùa chú và thế giới âm
-          binh thành sản phẩm giải trí hiện đại, độc đáo và mang đậm bản sắc dân tộc.</p>
-        <p>Chúng tôi tin rằng văn hóa tâm linh không chỉ là di sản mà còn là nguồn cảm hứng vô tận để tạo nên những trò
-          chơi hấp dẫn, giàu chiều sâu chiến thuật và cảm xúc.</p>
-      </div>
-
-      <!-- Founder -->
-      <div class="founder-spotlight reveal">
-        <div class="founder-avatar">
-          <div class="lightbox-trigger" data-caption="Nguyễn Phát Huy – Founder & CEO">
-            <img src="huy-avatar.jpg" alt="Nguyễn Phát Huy"
-              onerror="this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='flex';">
-          </div>
-          <div class="team-avatar-placeholder">
-            <span class="avatar-icon">👤</span>
-            <span style="font-size:0.6rem">Ảnh<br>Founder</span>
-          </div>
-        </div>
-        <div>
-          <p class="founder-label">✦ Người Sáng Lập</p>
-          <h3 class="founder-name">Nguyễn Phát Huy</h3>
-          <p class="founder-title">Founder &amp; CEO · Game Design · RMIT University</p>
-          <p class="founder-quote">"Chúng tôi không chỉ thiết kế trò chơi - chúng tôi xây dựng những nghi lễ kết nối
-            người với người, với văn hoá, với linh hồn dân tộc."</p>
-          <div class="team-contacts">
-            <a href="mailto:nguyenphathuy0123@gmail.com" class="team-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              Email
-            </a>
-            <a href="https://www.linkedin.com/in/huy-nguyen-tony-12b5a5380/" target="_blank" class="team-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect x="2" y="9" width="4" height="12" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-              LinkedIn
-            </a>
-            <a href="https://www.facebook.com/nguyenphathuy123/" target="_blank" class="team-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-              </svg>
-              Facebook
-            </a>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Team Grid -->
-      <div class="team-grid">
+    <hr class="divider" aria-hidden="true">
 
-        <div class="team-card reveal reveal-delay-1">
-          <div class="team-avatar">
-            <div class="lightbox-trigger" data-caption="Cao Nguyễn Minh Thảo – Art Director">
-              <img src="thao-avatar.jpg" alt="Cao Nguyễn Minh Thảo"
-                onerror="this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='flex';">
+    <!-- ══════════════════════════════════════════════════════════════════ ACHIEVEMENTS ══════ -->
+    <section id="achievements" class="section-container">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-tag">✦ Thành Tựu</span>
+          <h2 class="section-title">Our Journey</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="achievement-card reveal reveal-delay-1">
+            <div class="achievement-badge">2025</div>
+            <span class="achievement-icon">🏆</span>
+            <h3 class="achievement-title">RMIT GameJam 2025 Winner</h3>
+            <p class="achievement-desc">
+              Best Electronic Game at RMIT University's annual game jam competition. Recognition of our innovative design
+              approach.
+            </p>
+          </div>
+
+          <div class="achievement-card reveal reveal-delay-2">
+            <div class="achievement-badge">2025</div>
+            <span class="achievement-icon">🎴</span>
+            <h3 class="achievement-title">Road to Essen 2025 - Most Popular</h3>
+            <p class="achievement-desc">
+              Âm Binh awarded as Vietnam's most beloved boardgame entry at the prestigious international competition.
+            </p>
+          </div>
+
+          <div class="achievement-card reveal reveal-delay-3">
+            <div class="achievement-badge">2025</div>
+            <span class="achievement-icon">🤝</span>
+            <h3 class="achievement-title">Publishing Partnership</h3>
+            <p class="achievement-desc">
+              Official commercial partnership with Everjoy Publishing, one of Southeast Asia's leading game publishers.
+            </p>
+          </div>
+
+          <div class="achievement-card reveal reveal-delay-1">
+            <div class="achievement-badge">Viral</div>
+            <span class="achievement-icon">🎮</span>
+            <h3 class="achievement-title">Dear Ancestor - Digital Impact</h3>
+            <p class="achievement-desc">
+              Our digital game "Thưa Gia Tiên" (Dear Ancestor) reached millions through organic social sharing and
+              community enthusiasm.
+            </p>
+          </div>
+
+          <div class="achievement-card reveal reveal-delay-2">
+            <div class="achievement-badge">RMIT</div>
+            <span class="achievement-icon">🖼️</span>
+            <h3 class="achievement-title">5 Showcase Products</h3>
+            <p class="achievement-desc">
+              Five outstanding studio productions selected for official exhibition at RMIT University Vietnam campus.
+            </p>
+          </div>
+
+          <div class="achievement-card reveal reveal-delay-3">
+            <div class="achievement-badge">Upcoming</div>
+            <span class="achievement-icon">📱</span>
+            <h3 class="achievement-title">Digital Âm Binh</h3>
+            <p class="achievement-desc">
+              Digital adaptation of Âm Binh in development-bringing the spirit world to screens globally.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" aria-hidden="true">
+
+    <!-- ══════════════════════════════════════════════════════════════════ FEATURED: ÂM BINH ══════ -->
+    <section id="am-binh" class="section-container featured-section">
+      <div class="section-inner">
+        <div class="featured-wrapper">
+          <div class="featured-image reveal">
+            <figure class="lightbox-trigger" data-caption="Âm Binh: The Spirit Wardens - Cover Art">
+              <img src="otherPics/1)%20Anh%20Bia.png" alt="Âm Binh: The Spirit Wardens - Cover Art" loading="lazy">
+              <figcaption style="display: none;">Âm Binh: The Spirit Wardens</figcaption>
+            </figure>
+            <div class="img-placeholder">
+              <span class="img-placeholder-icon">🎴</span>
+              <span>Cover Art<br>Âm Binh: The Spirit Wardens</span>
             </div>
-            <div class="team-avatar-placeholder">
+            <div class="featured-corner"></div>
+            <div class="featured-corner br"></div>
+          </div>
+
+          <div class="featured-content reveal reveal-delay-2">
+            <p class="featured-label">✦ Flagship Game</p>
+            <h2 class="featured-title">Âm Binh</h2>
+            <p class="featured-subtitle">The Spirit Wardens</p>
+
+            <div class="featured-specs">
+              <div class="spec-item">
+                <span class="spec-label">Genre:</span>
+                <span class="spec-value">Strategic Card Boardgame</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Theme:</span>
+                <span class="spec-value">Vietnamese Supernatural Folklore</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Players:</span>
+                <span class="spec-value">3–6</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Play Time:</span>
+                <span class="spec-value">20–60 minutes</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Age:</span>
+                <span class="spec-value">16+</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Status:</span>
+                <span class="spec-value">Playtesting / Publisher Partnership</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Publisher:</span>
+                <span class="spec-value">Everjoy Publishing</span>
+              </div>
+            </div>
+
+            <p class="featured-desc">
+              Âm Binh places you in the realm of spirits-a liminal space where the living and dead negotiate power, 
+              territory, and destiny. As a spirit warden commanding units of ghosts, demons, and ancestral forces, 
+              you must outwit rival commanders through tactical positioning, ritual mechanics, and supernatural advantage.
+            </p>
+
+            <p class="featured-desc">
+              Every card is a summon. Every placement is a séance. Every victory, a prayer answered.
+            </p>
+
+            <div class="featured-tags">
+              <span class="tag">Strategy</span>
+              <span class="tag">Card Game</span>
+              <span class="tag">Area Control</span>
+              <span class="tag">Vietnamese Folklore</span>
+              <span class="tag">Ritual Mechanics</span>
+              <span class="tag">Social Interaction</span>
+            </div>
+
+            <div class="featured-ctas">
+              <a href="#presskit" class="btn-primary">Read Full Press Kit</a>
+              <a href="#contact" class="btn-outline">Pre-Register Interest</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" aria-hidden="true">
+    <!-- ══════════════════════════════════════════════════════════════════ PRESS KIT ══════ -->
+    <section id="presskit" class="section-container presskit-section">
+      <div class="section-inner presskit-inner">
+        <div class="section-header reveal">
+          <span class="section-tag">✦ Press Kit</span>
+          <h2 class="section-title">Âm Binh: Official Press & Media Kit</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="presskit-wrapper">
+          <!-- Presskit Sidebar Navigation -->
+          <aside class="presskit-sidebar reveal">
+            <nav class="presskit-nav">
+              <button class="presskit-nav-toggle" aria-label="Toggle presskit sections" aria-expanded="false">
+                ☰ Sections
+              </button>
+              <ul class="presskit-sections">
+                <li><a href="#pk-factsheet" class="presskit-link active">Factsheet</a></li>
+                <li><a href="#pk-elevator" class="presskit-link">Elevator Pitch</a></li>
+                <li><a href="#pk-description" class="presskit-link">About the Game</a></li>
+                <li><a href="#pk-features" class="presskit-link">Key Features</a></li>
+                <li><a href="#pk-lore" class="presskit-link">Lore & World</a></li>
+                <li><a href="#pk-gameplay" class="presskit-link">How to Play</a></li>
+                <li><a href="#pk-gallery" class="presskit-link">Gallery</a></li>
+                <li><a href="#pk-logos" class="presskit-link">Logos & Branding</a></li>
+                <li><a href="#pk-downloads" class="presskit-link">Downloads</a></li>
+                <li><a href="#pk-contact" class="presskit-link">Press Contact</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <!-- Presskit Content -->
+          <div class="presskit-content">
+            <!-- Factsheet -->
+            <div id="pk-factsheet" class="presskit-block reveal">
+              <h3 class="presskit-heading">Factsheet</h3>
+              <div class="factsheet-grid">
+                <div class="fact-item">
+                  <span class="fact-label">Developer:</span>
+                  <span class="fact-value">Exorcist Studio / Team Thầy Cúng</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Game Title:</span>
+                  <span class="fact-value">Âm Binh - The Spirit Wardens</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Genre:</span>
+                  <span class="fact-value">Strategic Card Boardgame</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Theme:</span>
+                  <span class="fact-value">Vietnamese Supernatural Folklore</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Platform:</span>
+                  <span class="fact-value">Physical Boardgame (Digital in development)</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Players:</span>
+                  <span class="fact-value">3–6</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Play Time:</span>
+                  <span class="fact-value">20–60 minutes</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Age Rating:</span>
+                  <span class="fact-value">16+</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Status:</span>
+                  <span class="fact-value">Playtesting / Publisher Partnership</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Publisher Partner:</span>
+                  <span class="fact-value">Everjoy Publishing</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Release Year:</span>
+                  <span class="fact-value">2025–2026 (TBA)</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-label">Location:</span>
+                  <span class="fact-value">RMIT University Vietnam, Ho Chi Minh City</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Elevator Pitch -->
+            <div id="pk-elevator" class="presskit-block reveal">
+              <h3 class="presskit-heading">Elevator Pitch</h3>
+              <p class="presskit-text">
+                <strong>Âm Binh: The Spirit Wardens</strong> is a strategic card boardgame where 3–6 players command
+                ghostly armies across the Vietnamese spirit realm. Through tactical positioning, ritual mechanics, and
+                supernatural strategy, players outwit rivals to control territories and influence the boundary between
+                the living and dead. Rooted in Vietnamese folklore, every game is a séance-every decision, a prayer.
+              </p>
+            </div>
+
+            <!-- Description -->
+            <div id="pk-description" class="presskit-block reveal">
+              <h3 class="presskit-heading">About the Game</h3>
+              <p class="presskit-text">
+                Âm Binh immerses players in the liminal realm between life and death-a space of Vietnamese spiritual
+                mythology where ghosts, demons, and ancestral forces negotiate territory and destiny.
+              </p>
+              <p class="presskit-text">
+                Players assume the role of spirit wardens, summoning and commanding units across a ritualistic game
+                board. Through clever card play, strategic positioning, and knowledge of spirit hierarchies, wardens
+                compete to dominate regions and fulfill spiritual contracts.
+              </p>
+              <p class="presskit-text">
+                The game celebrates Vietnamese supernatural lore while delivering complex, rewarding mechanics that
+                encourage interaction, bluffing, and emergent storytelling. Winner is determined not only by territory
+                control but also by the fulfillment of spiritual obligations and ritual mastery.
+              </p>
+            </div>
+
+            <!-- Key Features -->
+            <div id="pk-features" class="presskit-block reveal">
+              <h3 class="presskit-heading">Key Features</h3>
+              <ul class="features-list">
+                <li><strong>Ritual Mechanics:</strong> Unique gameplay systems rooted in Vietnamese ancestor veneration,
+                  spirit summoning, and ritual obligation.</li>
+                <li><strong>Strategic Depth:</strong> Complex card interactions, area control, and economic systems that
+                  reward tactical thinking and long-term planning.</li>
+                <li><strong>Cultural Authenticity:</strong> Lore and mechanics deeply researched and inspired by actual
+                  Vietnamese spiritual traditions, not superficial aesthetics.</li>
+                <li><strong>Emergent Storytelling:</strong> Every game generates unique narrative moments through player
+                  interaction, spirit summoning, and territory disputes.</li>
+                <li><strong>Scalable Complexity:</strong> Accessible to new players while offering strategic depth for
+                  experienced gamers.</li>
+                <li><strong>Beautiful Component Design:</strong> Premium artwork, card stock, and component design that
+                  evokes the dark, mysterious spirit world.</li>
+                <li><strong>Replayability:</strong> Multiple faction options, random event cards, and strategic variety
+                  ensure no two games play identically.</li>
+                <li><strong>Social Experience:</strong> Designed for memorable table moments-laughter, tension, and
+                  camaraderie.</li>
+              </ul>
+            </div>
+
+            <!-- Lore & World -->
+            <div id="pk-lore" class="presskit-block reveal">
+              <h3 class="presskit-heading">Lore & World Overview</h3>
+              <p class="presskit-text">
+                In Vietnamese spiritual tradition, the boundary between the living and the dead is not a wall but a
+                negotiation. Ancestors watch over their descendants. Spirits demand respect and ritual. Demons seek
+                power. The living tend to both-through offerings, prayers, and séances.
+              </p>
+              <p class="presskit-text">
+                <strong>Âm Binh</strong> (literally "Spirit Soldiers") explores this liminal space. Players assume roles
+                as spirit wardens-intermediaries between worlds who command armies of ghosts, demons, and ancestral
+                forces. The game board represents contested spiritual territory: shrines, temples, and burial grounds
+                where the living and dead vie for influence.
+              </p>
+              <p class="presskit-text">
+                Victory is not conquest alone-it is the fulfillment of spiritual obligations, the honoring of ritual,
+                and the mastery of the delicate balance between veneration and control.
+              </p>
+            </div>
+
+            <!-- How to Play -->
+            <div id="pk-gameplay" class="presskit-block reveal">
+              <h3 class="presskit-heading">How to Play (Overview)</h3>
+              <p class="presskit-text">
+                <strong>Setup:</strong> Each player takes a faction (each rooted in a different Vietnamese spirit
+                tradition) and begins with a ritual hand of cards and spirit units.
+              </p>
+              <p class="presskit-text">
+                <strong>Gameplay Loop:</strong> On your turn, you may:
+              </p>
+              <ul class="features-list">
+                <li>Play spirit cards to summon units onto contested territory</li>
+                <li>Move existing spirits to claim or defend regions</li>
+                <li>Perform rituals to activate special abilities and fulfill spiritual contracts</li>
+                <li>Interact with other players' spirits through negotiation or conflict</li>
+              </ul>
+              <p class="presskit-text">
+                <strong>Victory Conditions:</strong> Win by controlling key shrines, fulfilling spirit contracts, and
+                maintaining spiritual balance. The player who masters both territory and ritual emerges as the supreme
+                spirit warden.
+              </p>
+              <p class="presskit-text">
+                <em>For detailed rules, please refer to the rulebook in the Downloads section.</em>
+              </p>
+            </div>
+
+            <!-- Gallery -->
+            <div id="pk-gallery" class="presskit-block reveal">
+              <h3 class="presskit-heading">Gallery</h3>
+              <div class="gallery-grid">
+                <figure class="gallery-item lightbox-trigger" data-caption="Âm Binh Cover Art">
+                  <img src="otherPics/1)%20Anh%20Bia.png" alt="Âm Binh Cover Art" loading="lazy">
+                  <figcaption>Cover Art</figcaption>
+                </figure>
+                <figure class="gallery-item lightbox-trigger" data-caption="Game Board Layout">
+                  <img src="otherPics/2)%20Board%20Setup.png" alt="Game Board Layout" loading="lazy">
+                  <figcaption>Game Board</figcaption>
+                </figure>
+                <figure class="gallery-item lightbox-trigger" data-caption="Spirit Cards">
+                  <img src="otherPics/3)%20La%20Am%20Binh.png" alt="Spirit Cards" loading="lazy">
+                  <figcaption>Spirit Cards</figcaption>
+                </figure>
+                <figure class="gallery-item lightbox-trigger" data-caption="Game Components">
+                  <img src="assets/gallery/components.jpg" alt="Game Components" loading="lazy">
+                  <figcaption>Components</figcaption>
+                </figure>
+                <figure class="gallery-item lightbox-trigger" data-caption="Gameplay in Action">
+                  <img src="otherPics/7)%20People%20Playing%20the%20Game%201.jpg" alt="Gameplay in Action" loading="lazy">
+                  <figcaption>Gameplay</figcaption>
+                </figure>
+                <figure class="gallery-item lightbox-trigger" data-caption="Box Art & Packaging">
+                  <img src="assets/gallery/box-art.jpg" alt="Box Art & Packaging" loading="lazy">
+                  <figcaption>Box Art</figcaption>
+                </figure>
+              </div>
+              <p class="gallery-note">
+                <em>All placeholder images. For media inquiries and high-resolution assets, contact press@teamthaycung.com</em>
+              </p>
+            </div>
+
+            <!-- Logos & Branding -->
+            <div id="pk-logos" class="presskit-block reveal">
+              <h3 class="presskit-heading">Logos & Branding</h3>
+              <p class="presskit-text">
+                Official logos and branding guidelines are available in the Downloads section. All assets are provided
+                for press, review, and media use.
+              </p>
+              <div class="branding-items">
+                <div class="branding-item">
+                  <div class="branding-placeholder">
+                    <span>Logo Horizontal</span>
+                  </div>
+                  <p class="branding-note">Âm Binh Horizontal Logo (PNG, 2000px)</p>
+                </div>
+                <div class="branding-item">
+                  <div class="branding-placeholder">
+                    <span>Logo Vertical</span>
+                  </div>
+                  <p class="branding-note">Âm Binh Vertical Logo (PNG, 2000px)</p>
+                </div>
+                <div class="branding-item">
+                  <div class="branding-placeholder">
+                    <span>Studio Logo</span>
+                  </div>
+                  <p class="branding-note">Team Thầy Cúng Studio Logo (PNG, SVG)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Downloads -->
+            <div id="pk-downloads" class="presskit-block reveal">
+              <h3 class="presskit-heading">Downloads</h3>
+              <p class="presskit-text">
+                All press kit materials, screenshots, logos, and documentation are available for download below.
+                For media inquiries, interviews, or review copies, please contact us.
+              </p>
+              <div class="downloads-grid">
+                <a href="https://drive.google.com/file/d/1vkBhHiZdnJfEKG2WSOMfV1ejY8OKreN4/view?usp=sharing" class="download-card" download>
+                  <span class="download-icon">📦</span>
+                  <span class="download-name">Full Press Kit & Resources</span>
+                  <span class="download-size">Complete assets (ZIP)</span>
+                </a>
+                <a href="Screenshots&amp;Gallery.zip" class="download-card" download>
+                  <span class="download-icon">📸</span>
+                  <span class="download-name">Screenshots & Gallery</span>
+                  <span class="download-size">High-res images (ZIP)</span>
+                </a>
+                <a href="Logo&amp;Branding.zip" class="download-card" download>
+                  <span class="download-icon">🎨</span>
+                  <span class="download-name">Logos & Branding</span>
+                  <span class="download-size">PNG, SVG assets (ZIP)</span>
+                </a>
+                <a href="https://drive.google.com/file/d/1UKf_T_L4aMzsH1_OT0Mht2WEViI9Rnef/view?usp=sharing" class="download-card" download>
+                  <span class="download-icon">🎲</span>
+                  <span class="download-name">Âm Binh Game Kit</span>
+                  <span class="download-size">Game materials (ZIP)</span>
+                </a>
+                <a href="Am_Binh_Fact_Sheet.pdf" class="download-card" download>
+                  <span class="download-icon">📄</span>
+                  <span class="download-name">Factsheet PDF</span>
+                  <span class="download-size">One-page overview (PDF)</span>
+                </a>
+              </div>
+              <p class="download-note">
+                <em>If files are not yet available, contact press@teamthaycung.com to request assets.</em>
+              </p>
+            </div>
+
+            <!-- Press Contact -->
+            <div id="pk-contact" class="presskit-block reveal">
+              <h3 class="presskit-heading">Press Contact</h3>
+              <p class="presskit-text">
+                For media inquiries, review copies, interviews, or feature opportunities:
+              </p>
+              <div class="contact-details">
+                <div class="contact-line">
+                  <span class="contact-label">Email:</span>
+                  <a href="mailto:press@teamthaycung.com">press@teamthaycung.com</a>
+                </div>
+                <div class="contact-line">
+                  <span class="contact-label">Director Contact:</span>
+                  <a href="mailto:nguyenphathuy0123@gmail.com">nguyenphathuy0123@gmail.com</a>
+                </div>
+                <div class="contact-line">
+                  <span class="contact-label">Website:</span>
+                  <a href="https://www.teamthaycung.com">www.teamthaycung.com</a>
+                </div>
+                <div class="contact-line">
+                  <span class="contact-label">LinkedIn:</span>
+                  <a href="https://www.linkedin.com/company/exorcist-studio/" target="_blank">Exorcist Studio</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" aria-hidden="true">
+
+    <!-- ══════════════════════════════════════════════════════════════════ TEAM ══════ -->
+    <section id="team" class="section-container">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-tag">✦ Đội Ngũ</span>
+          <h2 class="section-title">The Wardens Behind the Veil</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <!-- Founder Spotlight -->
+        <div class="founder-spotlight reveal">
+          <div class="founder-avatar">
+            <figure class="lightbox-trigger" data-caption="Nguyễn Phát Huy - Founder & CEO">
+              <img src="otherPics/Huy Portrait 0.jpeg" alt="Nguyễn Phát Huy, Founder & CEO" loading="lazy">
+              <figcaption style="display: none;">Nguyễn Phát Huy</figcaption>
+            </figure>
+            <div class="avatar-placeholder">
               <span class="avatar-icon">👤</span>
-              <span>Ảnh Thành Viên</span>
+              <span>Founder<br>Avatar</span>
             </div>
           </div>
-          <div class="team-info">
-            <p class="team-role">Art Director</p>
-            <h3 class="team-name" data-text="Cao Nguyễn Minh Thảo">Cao Nguyễn Minh Thảo</h3>
-            <p class="team-major">Digital Media · RMIT University</p>
-            <p class="team-bio">Linh hồn thị giác của team - người kiến tạo nên thế giới âm u, huyền bí và sâu thẳm văn
-              hoá Việt trong từng nét vẽ.</p>
-            <div class="team-contacts">
-              <a href="https://www.facebook.com/thao.cao.3939503" target="_blank" class="team-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
-                Facebook
+          <div class="founder-info">
+            <p class="founder-label">✦ Founder & Creative Director</p>
+            <h3 class="founder-name">Nguyễn Phát Huy</h3>
+            <p class="founder-title">Game Design · Narrative Design · RMIT University</p>
+            <p class="founder-bio">
+              Visionary game designer and cultural storyteller. Huy founded Team Thầy Cúng to bridge Vietnamese
+              spiritual heritage and modern gaming. His philosophy: games are modern rituals connecting players to
+              culture, history, and each other.
+            </p>
+            <p class="founder-quote">
+              "We don't just design games-we craft séances. Every card is a summon, every move a prayer, every victory
+              a moment of spiritual communion."
+            </p>
+            <div class="team-links">
+              <a href="mailto:nguyenphathuy0123@gmail.com" class="team-link" title="Email">
+                <span>✉</span> Email
               </a>
-              <a href="tel:+84903898056" class="team-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-                Phone
+              <a href="https://www.linkedin.com/in/huy-nguyen-tony-12b5a5380/" target="_blank" class="team-link"
+                title="LinkedIn">
+                <span>in</span> LinkedIn
               </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="team-card reveal reveal-delay-2">
-          <div class="team-avatar">
-            <div class="lightbox-trigger" data-caption="Bùi Minh Duy – Marketer">
-              <img src="duy-avatar.jpg" alt="Bùi Minh Duy"
-                onerror="this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='flex';">
-            </div>
-            <div class="team-avatar-placeholder">
-              <span class="avatar-icon">👤</span>
-              <span>Ảnh Thành Viên</span>
-            </div>
-          </div>
-          <div class="team-info">
-            <p class="team-role">Marketer</p>
-            <h3 class="team-name" data-text="Bùi Minh Duy">Bùi Minh Duy</h3>
-            <p class="team-major">Logistics · RMIT University</p>
-            <p class="team-bio">Người kết nối team với thế giới - xây dựng chiến lược thương hiệu và đưa Âm Binh đến tay
-              những game thủ đam mê.</p>
-            <div class="team-contacts">
-              <a href="mailto:spursduy@gmail.com" class="team-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-                Email
-              </a>
-              <a href="https://www.facebook.com/duy.nick26" target="_blank" class="team-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
-                Facebook
+              <a href="https://www.facebook.com/nguyenphathuy123/" target="_blank" class="team-link" title="Facebook">
+                <span>f</span> Facebook
               </a>
             </div>
           </div>
         </div>
 
-        <div class="team-card reveal reveal-delay-3">
-          <div class="team-avatar">
-            <div class="lightbox-trigger" data-caption="Nguyễn Chí Đạt – Marketer & Tech">
-              <img src="dat-avatar.jpg" alt="Nguyễn Chí Đạt"
-                onerror="this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='flex';">
-            </div>
-            <div class="team-avatar-placeholder">
-              <span class="avatar-icon">👤</span>
-              <span>Ảnh Thành Viên</span>
-            </div>
-          </div>
-          <div class="team-info">
-            <p class="team-role">Marketer &amp; Tech</p>
-            <h3 class="team-name" data-text="Nguyễn Chí Đạt">Nguyễn Chí Đạt</h3>
-            <p class="team-major">Information Technology · RMIT University</p>
-            <p class="team-bio">Bộ não kỹ thuật của đội - kết hợp tư duy IT và marketing để xây dựng hệ sinh thái số cho
-              Âm Binh Team.</p>
-            <div class="team-contacts">
-              <a href="mailto:datchithanthanh@gmail.com" class="team-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-                Email
-              </a>
-              <a href="https://www.facebook.com/dat.nguyen.978168/" target="_blank" class="team-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
-                Facebook
-              </a>
-            </div>
-          </div>
-        </div>
+        <hr class="divider divider-thin" aria-hidden="true">
 
-      </div>
-    </div>
-  </section>
+        <!-- Team Grid -->
+        <div class="team-grid">
+          <div class="team-card reveal reveal-delay-1">
+            <div class="team-avatar">
+              <figure class="lightbox-trigger" data-caption="Cao Nguyễn Minh Thảo - Art Director">
+                <img src="memberPics/thao-avatar.jpg" alt="Cao Nguyễn Minh Thảo, Art Director" loading="lazy">
+                <figcaption style="display: none;">Cao Nguyễn Minh Thảo</figcaption>
+              </figure>
+              <div class="avatar-placeholder">
+                <span class="avatar-icon">🎨</span>
+                <span>Art<br>Director</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <p class="team-role">Art Director</p>
+              <h3 class="team-name">Cao Nguyễn Minh Thảo</h3>
+              <p class="team-major">Digital Media Design · RMIT University</p>
+              <p class="team-bio">
+                Visual architect of the spirit realm. Thảo translates Vietnamese folklore into haunting, evocative
+                artwork that captures the mystery and darkness of the supernatural world.
+              </p>
+              <div class="team-links">
+                <a href="mailto:cao.minh.thao@rmit.edu.vn" class="team-link" title="Email">
+                  <span>✉</span>
+                </a>
+                <a href="https://www.linkedin.com/in/thao-cao-nguyen/" target="_blank" class="team-link"
+                  title="LinkedIn">
+                  <span>in</span>
+                </a>
+              </div>
+            </div>
+          </div>
 
-  <hr class="divider">
+          <div class="team-card reveal reveal-delay-2">
+            <div class="team-avatar">
+              <figure class="lightbox-trigger" data-caption="Bùi Minh Duy - Marketing & Partnerships">
+                <img src="memberPics/duy-avatar.jpg" alt="Bùi Minh Duy, Marketing & Partnerships" loading="lazy">
+                <figcaption style="display: none;">Bùi Minh Duy</figcaption>
+              </figure>
+              <div class="avatar-placeholder">
+                <span class="avatar-icon">🤝</span>
+                <span>Marketing<br>Lead</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <p class="team-role">Marketing & Partnerships</p>
+              <h3 class="team-name">Bùi Minh Duy</h3>
+              <p class="team-major">Logistics & Operations · RMIT University</p>
+              <p class="team-bio">
+                Global connector. Duy bridges Team Thầy Cúng with publishers, press, players, and collaborators
+                worldwide. Master of brand storytelling and strategic partnerships.
+              </p>
+              <div class="team-links">
+                <a href="mailto:bui.minh.duy@rmit.edu.vn" class="team-link" title="Email">
+                  <span>✉</span>
+                </a>
+                <a href="https://www.linkedin.com/in/bui-duy-minh/" target="_blank" class="team-link"
+                  title="LinkedIn">
+                  <span>in</span>
+                </a>
+              </div>
+            </div>
+          </div>
 
-  <!-- ═══════════════════════════════════════════════ CONTACT -->
-  <section id="contact">
-    <div class="section-inner">
-      <div class="section-header reveal">
-        <span class="section-tag">Liên Hệ</span>
-        <h2 class="section-title">Kết Nối Với Chúng Tôi</h2>
-        <div class="section-rule"><span>✦</span></div>
-      </div>
-      <div class="contact-wrapper">
-        <div class="contact-intro reveal">
-          <p>Dù bạn là publisher, nhà sản xuất, cộng tác viên sáng tạo hay đơn giản là một game thủ muốn biết thêm về Âm
-            Binh - chúng tôi luôn sẵn lòng lắng nghe.</p>
-          <p>Hãy để chúng tôi cùng nhau tạo ra những trải nghiệm chơi game không thể quên.</p>
-          <a href="mailto:nguyenphathuy0123@gmail.com" class="contact-detail">
-            <span class="contact-icon">✉</span> nguyenphathuy0123@gmail.com
-          </a>
-          <a href="https://www.linkedin.com/in/huy-nguyen-tony-12b5a5380/" target="_blank" class="contact-detail">
-            <span class="contact-icon">in</span> LinkedIn - Nguyễn Phát Huy
-          </a>
-          <a href="https://www.facebook.com/nguyenphathuy123/" target="_blank" class="contact-detail">
-            <span class="contact-icon">fb</span> Facebook - Team Thầy Cúng
-          </a>
-        </div>
-        <div class="contact-form reveal reveal-delay-2">
-          <div class="form-group">
-            <label class="form-label">Tên Của Bạn *</label>
-            <input type="text" class="form-input" placeholder="Nguyễn Văn A">
+          <div class="team-card reveal reveal-delay-3">
+            <div class="team-avatar">
+              <figure class="lightbox-trigger" data-caption="Nguyễn Chí Đạt - IT Lead & Tech Development">
+                <img src="memberPics/dat-avatar.jpg" alt="Nguyễn Chí Đạt, IT Lead & Tech Development" loading="lazy">
+                <figcaption style="display: none;">Nguyễn Chí Đạt</figcaption>
+              </figure>
+              <div class="avatar-placeholder">
+                <span class="avatar-icon">💻</span>
+                <span>IT Lead<br>& Tech</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <p class="team-role">IT Lead & Tech Development</p>
+              <h3 class="team-name">Nguyễn Chí Đạt</h3>
+              <p class="team-major">Information Technology · RMIT University</p>
+              <p class="team-bio">
+                Technical architect behind Âm Binh's digital presence. Đạt manages infrastructure, platform development,
+                and ensures seamless technical execution across all studio projects.
+              </p>
+              <div class="team-links">
+                <a href="mailto:nguyen.chi.dat@rmit.edu.vn" class="team-link" title="Email">
+                  <span>✉</span>
+                </a>
+                <a href="https://www.linkedin.com/in/nguyenchidat/" target="_blank" class="team-link"
+                  title="LinkedIn">
+                  <span>in</span>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label class="form-label">Email *</label>
-            <input type="email" class="form-input" placeholder="you@example.com">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Lời Nhắn *</label>
-            <textarea class="form-textarea" placeholder="Chia sẻ ý tưởng hoặc hợp tác của bạn..."></textarea>
-          </div>
-          <button class="btn-primary" id="submit-btn" style="width:fit-content">Gửi Lời Nhắn →</button>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div class="footer-logo">Team Thầy Cúng</div>
-    <p class="footer-tagline">Nơi Linh Hồn Việt Gặp Gỡ Trên Bàn Cờ</p>
-    <div class="footer-links">
-      <a href="#hero">Trang Chủ</a>
-      <a href="#about">Đội Ngũ</a>
-      <a href="#achievements">Thành Tựu</a>
-      <a href="#featured">Dự Án</a>
-      <a href="#contact">Liên Hệ</a>
+    <hr class="divider" aria-hidden="true">
+
+    <!-- ══════════════════════════════════════════════════════════════════ CONTACT ══════ -->
+    <section id="contact" class="section-container contact-section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-tag">✦ Liên Hệ</span>
+          <h2 class="section-title">Connect With Us</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-intro reveal">
+            <p>
+              Whether you're a publisher, journalist, collaborator, or player-we're here to share our story and hear yours.
+            </p>
+          </div>
+
+          <div class="contact-grid reveal reveal-delay-1">
+            <div class="contact-box">
+              <h4 class="contact-box-title">Direct Contact</h4>
+              <a href="mailto:nguyenphathuy0123@gmail.com" class="contact-link">
+                <span class="contact-icon">✉</span>
+                <span>nguyenphathuy0123@gmail.com</span>
+              </a>
+            </div>
+            <div class="contact-box">
+              <h4 class="contact-box-title">Connect</h4>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/huy-nguyen-tony-12b5a5380/" target="_blank" class="social-link" title="LinkedIn">
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://www.facebook.com/nguyenphathuy123/" target="_blank" class="social-link" title="Facebook">
+                  <span>Facebook</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-form reveal reveal-delay-2">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Your Name *</label>
+              <input type="text" id="form-name" class="form-input" placeholder="Full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Your Email *</label>
+              <input type="email" id="form-email" class="form-input" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Subject *</label>
+              <input type="text" id="form-subject" class="form-input" placeholder="What's this about?" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Message *</label>
+              <textarea id="form-message" class="form-textarea" placeholder="Your message..." rows="6"
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" id="submit-btn">Send Message →</button>
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════════════ FOOTER ══════ -->
+  <footer id="site-footer" class="footer">
+    <div class="footer-inner">
+      <div class="footer-content">
+        <div class="footer-section footer-branding">
+          <h2 class="footer-title">Team Thầy Cúng</h2>
+          <p class="footer-subtitle">Exorcist Studio</p>
+          <p class="footer-tagline">Vietnamese Folklore Boardgame Studio</p>
+        </div>
+
+        <div class="footer-section footer-nav">
+          <h3 class="footer-nav-title">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-studio">About</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#am-binh">Âm Binh</a></li>
+            <li><a href="#presskit">Press Kit</a></li>
+            <li><a href="#team">Team</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section footer-game">
+          <h3 class="footer-nav-title">Flagship Game</h3>
+          <p class="footer-game-subtitle">Âm Binh: The Spirit Wardens</p>
+          <p class="footer-game-desc">Strategic card boardgame. 3–6 players. 20–60 minutes. 16+.</p>
+        </div>
+
+        <div class="footer-section footer-contact">
+          <h3 class="footer-nav-title">Connect</h3>
+          <a href="mailto:nguyenphathuy0123@gmail.com" class="footer-contact-link">Email</a>
+          <a href="https://www.linkedin.com/in/huy-nguyen-tony-12b5a5380/" target="_blank" class="footer-contact-link">LinkedIn</a>
+          <a href="#contact" class="footer-contact-link">Contact Form</a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-copy">
+        <p>© 2025 Team Thầy Cúng · Exorcist Studio</p>
+        <p>RMIT University Vietnam · Ho Chi Minh City</p>
+        <p>Crafted with ritual and passion for Vietnamese culture.</p>
+      </div>
     </div>
-    <p class="footer-copy">
-      © 2025 Team Thầy Cúng · RMIT University Vietnam<br>
-      Được xây dựng với niềm đam mê và văn hoá Việt Nam
-    </p>
   </footer>
+
+  <script src="scripts.js" defer></script>
 </body>
 
 </html>
