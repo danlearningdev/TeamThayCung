@@ -222,6 +222,19 @@ body::before {
   transition: color var(--transition-fast);
 }
 
+.nav-logo-img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  border-radius: 6px;
+  filter: drop-shadow(0 0 10px rgba(201, 168, 76, 0.25));
+}
+
+.nav-logo .logo-text {
+  display: inline-block;
+  transform: translateY(-0.5px);
+}
+
 .nav-logo:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 2px;
@@ -861,7 +874,7 @@ body::before {
 }
 
 .lightbox-trigger::after {
-  content: '🔍 Xem Ảnh';
+content: '🔍 View Image';
   position: absolute;
   inset: 0;
   background: rgba(10, 6, 4, 0.65);
@@ -1736,7 +1749,7 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 600px;
+  max-width: 720px;
   margin: 3rem auto 0;
   padding: 2rem;
   background: rgba(139, 0, 0, 0.04);
@@ -2077,6 +2090,11 @@ body::before {
 @media (max-width: 1024px) {
   .presskit-wrapper {
     grid-template-columns: 1fr;
+  }
+
+  .nav-logo-img {
+    width: 30px;
+    height: 30px;
   }
 
   .presskit-sidebar {

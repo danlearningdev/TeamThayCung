@@ -196,5 +196,5 @@ document.getElementById('submit-btn')?.addEventListener('click', () => {
     inp.style.borderColor = !inp.value.trim() ? 'var(--crimson-bright)' : '';
     if (!inp.value.trim()) valid = false;
   });
-  if (valid) alert('Cảm ơn! Lời nhắn của bạn đã được ghi nhận. Chúng tôi sẽ liên lạc sớm nhất.');
+if (valid) alert('Thank you! Your message has been received. We will get in touch with you as soon as possible.');
 });

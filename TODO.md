@@ -1,0 +1,6 @@
+- [x] Review existing header/logo markup (index.html) and current CSS for nav logo.
+- [x] Update index.html to show TeamThayCung Logo.PNG in top-left nav (replace/augment sigil + text).
+- [x] Add CSS rules to size/fit the logo and ensure responsiveness.
+- [x] Add additional placements (if any) for the logo elsewhere on the page.
+- [x] Smoke test by running/serving the page and verifying image loads.
+- [x] Record any follow-up fixes (alt text, caching, layout shifts).
