@@ -10,6 +10,7 @@
   --crimson: #8B0000;
   --crimson-bright: #C0392B;
   --crimson-glow: #ff3b1a;
+  --label-accent: #E07A6B;
   --gold: #C9A84C;
   --gold-light: #E8C96A;
   --ink: #0A0604;
@@ -832,7 +833,7 @@ body::before {
 
 .featured-image {
   position: relative;
-  aspect-ratio: 4/3;
+  aspect-ratio: auto;
   background: var(--ash);
   border: 1px solid rgba(139, 0, 0, 0.4);
   overflow: hidden;
@@ -843,11 +844,23 @@ body::before {
 
 .featured-image figure {
   width: 100%;
-  height: 100%;
+  height: auto;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.featured-image .lightbox-trigger {
+  height: auto;
+}
+
+.featured-image .lightbox-trigger img {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
 }
 
 .lightbox-trigger {
@@ -957,7 +970,7 @@ content: '🔍 View Image';
   font-family: 'Crimson Text', serif;
   font-size: 0.65rem;
   letter-spacing: 0.3em;
-  color: var(--crimson);
+  color: var(--label-accent);
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -1000,7 +1013,7 @@ content: '🔍 View Image';
   font-family: 'Crimson Text', serif;
   font-size: 0.65rem;
   letter-spacing: 0.15em;
-  color: var(--crimson);
+  color: var(--label-accent);
   text-transform: uppercase;
 }
 
@@ -1191,7 +1204,7 @@ content: '🔍 View Image';
   font-family: 'Crimson Text', serif;
   font-size: 0.65rem;
   letter-spacing: 0.15em;
-  color: var(--crimson);
+  color: var(--label-accent);
   text-transform: uppercase;
   display: block;
   margin-bottom: 0.4rem;
@@ -1400,9 +1413,27 @@ content: '🔍 View Image';
   color: var(--gold-light);
 }
 
-.contact-line a:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 2px;
+.presskit-subheading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--gold);
+  margin: 2rem 0 1rem;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(139, 0, 0, 0.15);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.faq-item .presskit-text:last-child {
+  margin-bottom: 0;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -1501,7 +1532,7 @@ content: '🔍 View Image';
   font-family: 'Crimson Text', serif;
   font-size: 0.6rem;
   letter-spacing: 0.25em;
-  color: var(--crimson);
+  color: var(--label-accent);
   text-transform: uppercase;
   margin-bottom: 0.4rem;
 }
@@ -1569,9 +1600,9 @@ content: '🔍 View Image';
    ───────────────────────────────────────────────────────────────────────────── */
 .founder-spotlight {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: minmax(420px, 44%) 1fr;
   gap: 3rem;
-  align-items: start;
+  align-items: stretch;
   margin-bottom: 5rem;
   padding: 3rem;
   background: linear-gradient(135deg, rgba(139, 0, 0, 0.12) 0%, transparent 60%);
@@ -1581,30 +1612,44 @@ content: '🔍 View Image';
 }
 
 .founder-avatar {
-  width: 160px;
-  height: 160px;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
   border: 2px solid rgba(139, 0, 0, 0.5);
   overflow: hidden;
   position: relative;
   flex-shrink: 0;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   background: var(--smoke);
+  align-self: stretch;
+}
+
+.founder-avatar figure,
+.founder-avatar .lightbox-trigger {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: block;
+}
+
+.founder-avatar .lightbox-trigger::after {
+  display: none;
 }
 
 .founder-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
 }
 
 .founder-label {
   font-family: 'Crimson Text', serif;
   font-size: 0.6rem;
   letter-spacing: 0.3em;
-  color: var(--crimson);
+  color: var(--label-accent);
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
@@ -2141,8 +2186,11 @@ content: '🔍 View Image';
 
   .founder-avatar {
     width: 100%;
-    max-width: 250px;
-    height: 250px;
+    max-width: 100%;
+    min-width: unset;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    align-self: auto;
     margin: 0 auto;
   }
 
