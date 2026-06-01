@@ -34,6 +34,13 @@
     </div>
   </dialog>
 
+  <!-- ══════════════════════════════════════════════════════════════════ LANGUAGE CONTROL BAR ══════ -->
+  <div id="control-bar" class="control-bar">
+    <button id="language-toggle" class="control-btn lang-btn" aria-label="Toggle language" title="Chuyển ngôn ngữ">
+      <span class="lang-text">EN</span>
+    </button>
+  </div>
+
   <!-- ══════════════════════════════════════════════════════════════════ HEADER / NAV ══════ -->
   <header id="site-header">
     <nav id="main-nav" class="nav-main">
@@ -50,16 +57,19 @@
       </button>
 
       <ul id="nav-menu" class="nav-links">
-<li><a href="#home">Home</a></li>
-        <li><a href="#about-studio">About Us</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#am-binh">Spirit Gathering</a></li>
-        <li><a href="#presskit">Press Kit</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" data-en="Home" data-vi="Trang Chủ">Home</a></li>
+        <li><a href="#about-studio" data-en="About Us" data-vi="Về Chúng Tôi">About Us</a></li>
+        <li><a href="#achievements" data-en="Achievements" data-vi="Thành Tích">Achievements</a></li>
+        <li><a href="#am-binh" data-en="Spirit Gathering" data-vi="Tập Hợp Linh Hồn">Spirit Gathering</a></li>
+        <li><a href="#presskit" data-en="Press Kit" data-vi="Bộ Tài Liệu Báo Chí">Press Kit</a></li>
+        <li><a href="#team" data-en="Team" data-vi="Đội Ngũ">Team</a></li>
+        <li><a href="#contact" data-en="Contact" data-vi="Liên Hệ">Contact</a></li>
       </ul>
     </nav>
   </header>
+
+  <!-- ══════════════════════════════════════════════════════════════════ SCROLL TO TOP BUTTON ══════ -->
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" title="Back to Top">↑</button>
 
   <main id="main-content">
 
@@ -70,76 +80,76 @@
       <div class="fog-layer"></div>
 
       <div class="hero-content">
-        <p class="hero-eyebrow reveal">RMIT University · Boardgame Design Studio</p>
-        <h1 class="hero-title reveal">Team<br><span>Thầy Cúng</span></h1>
-        <p class="hero-subtitle reveal">Vietnamese Folklore Boardgame Studio</p>
-        <p class="hero-desc reveal">
+        <p class="hero-eyebrow reveal" data-en="RMIT University · Boardgame Design Studio" data-vi="Đại học RMIT · Studio Thiết kế Board Game">RMIT University · Boardgame Design Studio</p>
+        <h1 class="hero-title reveal"><span data-en="Team" data-vi="Team">Team</span><br><span data-en="Thầy Cúng" data-vi="Thầy Cúng">Thầy Cúng</span></h1>
+        <p class="hero-subtitle reveal" data-en="Vietnamese Folklore Boardgame Studio" data-vi="Studio Board Game Dân gian Việt Nam">Vietnamese Folklore Boardgame Studio</p>
+        <p class="hero-desc reveal" data-en="We are Exorcist Studio, a game design team from RMIT University. We create strategic boardgames and digital experiences rooted in Vietnamese spiritual folklore, rituals, and spiritual culture. Every game is a séance, every decision is a prayer." data-vi="Chúng tôi là Exorcist Studio, một đội thiết kế game từ Đại học RMIT. Chúng tôi tạo ra những trò chơi board game chiến lược và trải nghiệm kỹ thuật số có gốc rễ trong dân gian tâm linh, nghi lễ và văn hóa tâm linh Việt Nam. Mỗi trò chơi là một buổi cầu hồn, mỗi quyết định là một lời cầu nguyện.">
           We are Exorcist Studio, a game design team from RMIT University. We create strategic boardgames and digital
           experiences rooted in Vietnamese spiritual folklore, rituals, and spiritual culture. Every game is a séance,
           every decision is a prayer.
         </p>
         <div class="hero-ctas reveal">
-<a href="#am-binh" class="btn-primary">Explore Spirit Gathering</a>
-          <a href="#presskit" class="btn-outline">View Press Kit</a>
-          <a href="#contact" class="btn-outline">Contact</a>
+          <a href="#am-binh" class="btn-primary" data-en="Explore Spirit Gathering" data-vi="Khám Phá Tập Hợp Linh Hồn">Explore Spirit Gathering</a>
+          <a href="#presskit" class="btn-outline" data-en="View Press Kit" data-vi="Xem Bộ Tài Liệu">View Press Kit</a>
+          <a href="#contact" class="btn-outline" data-en="Contact" data-vi="Liên Hệ">Contact</a>
         </div>
       </div>
 
-      <div class="scroll-hint">Cuộn xuống</div>
+      <div class="scroll-hint" data-en="Scroll down" data-vi="Cuộn xuống">Scroll down</div>
     </section>
 
     <!-- ══════════════════════════════════════════════════════════════════ ABOUT STUDIO ══════ -->
     <section id="about-studio" class="section-container">
       <div class="section-inner">
         <div class="section-header reveal">
-<span class="section-tag">✦ About Us</span>
-          <h2 class="section-title">Team Thay Cung / Exorcist Studio</h2>
+          <span class="section-tag" data-en="✦ About Us" data-vi="✦ Về Chúng Tôi">✦ About Us</span>
+          <h2 class="section-title" data-en="Team Thay Cung / Exorcist Studio" data-vi="Team Thay Cung / Exorcist Studio">Team Thay Cung / Exorcist Studio</h2>
           <div class="section-rule"></div>
         </div>
 
         <div class="studio-content reveal">
           <div class="studio-text">
-            <h3>Who We Are</h3>
-            <p>
+            <h3 data-en="Who We Are" data-vi="Chúng Tôi Là Ai">Who We Are</h3>
+            <p data-en="Team Thay Cung (Exorcist Studio) is a Vietnamese boardgame design studio dedicated to creating games that celebrate and explore Vietnamese spiritual culture, folklore, and rituals." data-vi="Team Thay Cung (Exorcist Studio) là một studio thiết kế board game Việt Nam tập trung vào tạo ra những trò chơi tôn vinh và khám phá văn hóa tâm linh, dân gian và nghi lễ Việt Nam.">
               Team Thay Cung (Exorcist Studio) is a Vietnamese boardgame design studio dedicated to creating games that
               celebrate and explore Vietnamese spiritual culture, folklore, and rituals.
             </p>
 
-            <h3>Our Mission</h3>
-            <p>
+            <h3 data-en="Our Mission" data-vi="Sứ Mệnh Của Chúng Tôi">Our Mission</h3>
+            <p data-en="We bring Vietnamese spiritual heritage closer to the world through immersive tabletop and digital games. We believe folklore is not just history-it's an endless source of storytelling, strategy, and human connection. Through our games, we honor ancestral traditions while creating modern, engaging experiences." data-vi="Chúng tôi mang di sản tâm linh Việt Nam gần hơn với thế giới thông qua những trò chơi bàn và kỹ thuật số đắm chìm. Chúng tôi tin rằng dân gian không chỉ là lịch sử - nó là một nguồn vô tận của kỳ tích, chiến lược và kết nối con người. Thông qua các trò chơi của chúng tôi, chúng tôi tôn vinh truyền thống tổ tiên trong khi tạo ra những trải nghiệm hiện đại, hấp dẫn.">
               We bring Vietnamese spiritual heritage closer to the world through immersive tabletop and digital games.
               We believe folklore is not just history-it's an endless source of storytelling, strategy, and human
               connection. Through our games, we honor ancestral traditions while creating modern, engaging experiences.
             </p>
 
-            <h3>Our Vision</h3>
-            <p>
+            <h3 data-en="Our Vision" data-vi="Tầm Nhìn Của Chúng Tôi">Our Vision</h3>
+            <p data-en="To establish Vietnamese boardgame design as a distinctive voice in the global gaming industry, rooted in authentic cultural narratives and ritual aesthetics. We aspire to export Vietnamese spiritual worldviews through games that are mechanically rich, narratively deep, and culturally resonant." data-vi="Thiết lập thiết kế board game Việt Nam như một giọng nói độc đáo trong ngành công nghiệp game toàn cầu, có gốc rễ trong các câu chuyện văn hóa xác thực và thẩm mỹ nghi lễ. Chúng tôi khao khát xuất khẩu thế giới quan tâm linh Việt Nam thông qua những trò chơi giàu cơ chế, sâu sắc về tường thuật và cộng hưởng về mặt văn hóa.">
               To establish Vietnamese boardgame design as a distinctive voice in the global gaming industry, rooted in
               authentic cultural narratives and ritual aesthetics. We aspire to export Vietnamese spiritual worldviews
               through games that are mechanically rich, narratively deep, and culturally resonant.
             </p>
 
-            <p><strong>Based at:</strong> RMIT University Vietnam<br>
-              <strong>Founded:</strong> 2025<br>
-              <strong>Studio Size:</strong> Core team of 4 passionate designers and creators
+            <p><span data-en="Based at:" data-vi="Có trụ sở tại:"><strong data-en="Based at:" data-vi="Có trụ sở tại:">Based at:</strong></span> RMIT University Vietnam<br>
+              <span data-en="Founded:" data-vi="Thành lập:"><strong data-en="Founded:" data-vi="Thành lập:">Founded:</strong></span> 2025<br>
+              <span data-en="Studio Size:" data-vi="Kích thước Studio:"><strong data-en="Studio Size:" data-vi="Kích thước Studio:">Studio Size:</strong></span> <span data-en="Core team of 4 passionate designers and creators" data-vi="Đội ngũ cốt lõi 4 nhà thiết kế và người sáng tạo đam mê">Core team of 4 passionate designers and creators</span>
             </p>
           </div>
 
           <div class="studio-highlights">
             <div class="highlight-card">
               <span class="highlight-icon">🎲</span>
-              <h4>Strategic Design</h4>
-              <p>Complex, rewarding mechanics rooted in Vietnamese cultural symbolism.</p>
+              <h4 data-en="Strategic Design" data-vi="Thiết Kế Chiến Lược">Strategic Design</h4>
+              <p data-en="Complex, rewarding mechanics rooted in Vietnamese cultural symbolism." data-vi="Cơ chế phức tạp và xứng đáng có gốc rễ trong biểu tượng văn hóa Việt Nam.">Complex, rewarding mechanics rooted in Vietnamese cultural symbolism.</p>
             </div>
             <div class="highlight-card">
               <span class="highlight-icon">🌙</span>
-              <h4>Folklore-First</h4>
-              <p>Authentic cultural narratives, not shallow aesthetics.</p>
+              <h4 data-en="Folklore-First" data-vi="Dân Gian Đầu Tiên">Folklore-First</h4>
+              <p data-en="Authentic cultural narratives, not shallow aesthetics." data-vi="Các câu chuyện văn hóa xác thực, không phải thẩm mỹ nông cạn.">Authentic cultural narratives, not shallow aesthetics.</p>
             </div>
             <div class="highlight-card">
               <span class="highlight-icon">🤝</span>
-              <h4>Community-Driven</h4>
-              <p>Games designed to bring people together through shared ritual and story.</p>
+              <h4 data-en="Community-Driven" data-vi="Hướng Tới Cộng Đồng">Community-Driven</h4>
+              <p data-en="Games designed to bring people together through shared ritual and story." data-vi="Các trò chơi được thiết kế để đoàn kết mọi người thông qua nghi lễ và câu chuyện chung.">Games designed to bring people together through shared ritual and story.</p>
             </div>
           </div>
         </div>
@@ -152,8 +162,8 @@
     <section id="achievements" class="section-container">
       <div class="section-inner">
         <div class="section-header reveal">
-<span class="section-tag">✦ Achievements</span>
-          <h2 class="section-title">Our Journey</h2>
+          <span class="section-tag" data-en="✦ Achievements" data-vi="✦ Thành Tích">✦ Achievements</span>
+          <h2 class="section-title" data-en="Our Journey" data-vi="Hành Trình Của Chúng Tôi">Our Journey</h2>
           <div class="section-rule"></div>
         </div>
 
@@ -161,66 +171,52 @@
           <div class="achievement-card reveal reveal-delay-1">
             <div class="achievement-badge">2025</div>
             <span class="achievement-icon">🏆</span>
-            <h3 class="achievement-title">RMIT GameJam 2025 Winner</h3>
-            <p class="achievement-desc">
-              Best Electronic Game at RMIT University's annual game jam competition. Recognition of our innovative design
-              approach.
-            </p>
+            <h3 class="achievement-title" data-en="RMIT GameJam 2025 Winner" data-vi="Nhà Vô Địch RMIT GameJam 2025">RMIT GameJam 2025 Winner</h3>
+            <p class="achievement-desc" data-en="Best Electronic Game at RMIT University's annual game jam competition. Recognition of our innovative design approach." data-vi="Game Điện Tử Tốt Nhất tại cuộc thi game jam hàng năm của Đại học RMIT. Công nhận phương pháp thiết kế đổi mới của chúng tôi.">Best Electronic Game at RMIT University's annual game jam competition. Recognition of our innovative design
+              approach.</p>
           </div>
 
           <div class="achievement-card reveal reveal-delay-2">
             <div class="achievement-badge">2025</div>
             <span class="achievement-icon">🎴</span>
-            <h3 class="achievement-title">Road to Essen 2025 - Most Popular</h3>
-            <p class="achievement-desc">
-              Spirit Gathering awarded as Vietnam's most beloved boardgame entry at the prestigious international competition.
-            </p>
+            <h3 class="achievement-title" data-en="Road to Essen 2025 - Most Popular" data-vi="Con Đường Đến Essen 2025 - Được Yêu Thích Nhất">Road to Essen 2025 - Most Popular</h3>
+            <p class="achievement-desc" data-en="Spirit Gathering awarded as Vietnam's most beloved boardgame entry at the prestigious international competition." data-vi="Spirit Gathering được trao giải là tác phẩm board game được yêu thích nhất của Việt Nam tại cuộc thi quốc tế danh giá.">Spirit Gathering awarded as Vietnam's most beloved boardgame entry at the prestigious international competition.</p>
           </div>
 
           <div class="achievement-card reveal reveal-delay-3">
             <div class="achievement-badge">2025</div>
             <span class="achievement-icon">🌍</span>
-            <h3 class="achievement-title">SPIEL Essen 2025</h3>
-            <p class="achievement-desc">
-              Featured at SPIEL Essen 2025, the world's largest boardgame fair, showcasing Vietnamese spiritual culture to a global audience.
-            </p>
+            <h3 class="achievement-title" data-en="SPIEL Essen 2025" data-vi="SPIEL Essen 2025">SPIEL Essen 2025</h3>
+            <p class="achievement-desc" data-en="Featured at SPIEL Essen 2025, the world's largest boardgame fair, showcasing Vietnamese spiritual culture to a global audience." data-vi="Được trưng bày tại SPIEL Essen 2025, hội chợ board game lớn nhất thế giới, giới thiệu văn hóa tâm linh Việt Nam với khán giả toàn cầu.">Featured at SPIEL Essen 2025, the world's largest boardgame fair, showcasing Vietnamese spiritual culture to a global audience.</p>
           </div>
 
           <div class="achievement-card reveal reveal-delay-1">
             <div class="achievement-badge">2025</div>
             <span class="achievement-icon">🎨</span>
-            <h3 class="achievement-title">Award-Winning Artwork</h3>
-            <p class="achievement-desc">
-              Artwork recognized at Road to Essen 2025, capturing the mystery and depth of Vietnam's spiritual world.
-            </p>
+            <h3 class="achievement-title" data-en="Award-Winning Artwork" data-vi="Tác Phẩm Nghệ Thuật Đoạt Giải">Award-Winning Artwork</h3>
+            <p class="achievement-desc" data-en="Artwork recognized at Road to Essen 2025, capturing the mystery and depth of Vietnam's spiritual world." data-vi="Tác phẩm được công nhận tại Road to Essen 2025, nắm bắt được bí ẩn và sâu sắc của thế giới tâm linh Việt Nam.">Artwork recognized at Road to Essen 2025, capturing the mystery and depth of Vietnam's spiritual world.</p>
           </div>
 
           <div class="achievement-card reveal reveal-delay-2">
             <div class="achievement-badge">2025</div>
             <span class="achievement-icon">🤝</span>
-            <h3 class="achievement-title">Publishing Partnership</h3>
-            <p class="achievement-desc">
-              Signed commercial partnership with Everjoy Publishing, one of Southeast Asia's leading game publishers.
-            </p>
+            <h3 class="achievement-title" data-en="Publishing Partnership" data-vi="Hợp Tác Nhà Xuất Bản">Publishing Partnership</h3>
+            <p class="achievement-desc" data-en="Signed commercial partnership with Everjoy Publishing, one of Southeast Asia's leading game publishers." data-vi="Ký kết hợp tác thương mại với Everjoy Publishing, một trong những nhà xuất bản game hàng đầu của Đông Nam Á.">Signed commercial partnership with Everjoy Publishing, one of Southeast Asia's leading game publishers.</p>
           </div>
 
           <div class="achievement-card reveal reveal-delay-3">
             <div class="achievement-badge">Viral</div>
             <span class="achievement-icon">🎮</span>
-            <h3 class="achievement-title">Dear Ancestor - Digital Impact</h3>
-            <p class="achievement-desc">
-              Our digital game "Thưa Gia Tiên" (Dear Ancestor) reached millions through organic social sharing and
-              community enthusiasm.
-            </p>
+            <h3 class="achievement-title" data-en="Dear Ancestor - Digital Impact" data-vi="Thưa Gia Tiên - Tác Động Kỹ Thuật Số">Dear Ancestor - Digital Impact</h3>
+            <p class="achievement-desc" data-en="Our digital game \"Thưa Gia Tiên\" (Dear Ancestor) reached millions through organic social sharing and community enthusiasm." data-vi="Game kỹ thuật số của chúng tôi \"Thưa Gia Tiên\" (Dear Ancestor) đã tiếp cận hàng triệu người thông qua chia sẻ trên mạng xã hội tự nhiên và lòng nhiệt tình của cộng đồng.">Our digital game "Thưa Gia Tiên" (Dear Ancestor) reached millions through organic social sharing and
+              community enthusiasm.</p>
           </div>
 
           <div class="achievement-card reveal reveal-delay-1">
             <div class="achievement-badge">RMIT</div>
             <span class="achievement-icon">🖼️</span>
-            <h3 class="achievement-title">5 Showcase Products</h3>
-            <p class="achievement-desc">
-              Five outstanding studio productions selected for official exhibition at RMIT University Vietnam campus.
-            </p>
+            <h3 class="achievement-title" data-en="5 Showcase Products" data-vi="5 Sản Phẩm Trưng Bày">5 Showcase Products</h3>
+            <p class="achievement-desc" data-en="Five outstanding studio productions selected for official exhibition at RMIT University Vietnam campus." data-vi="Năm sản phẩm studio xuất sắc được chọn để trưng bày chính thức tại cơ sở Đại học RMIT Việt Nam.">Five outstanding studio productions selected for official exhibition at RMIT University Vietnam campus.</p>
           </div>
         </div>
       </div>
@@ -231,65 +227,64 @@
     <!-- ══════════════════════════════════════════════════════════════════ FEATURED: Spirit Gathering ══════ -->
     <section id="am-binh" class="section-container featured-section">
       <div class="section-inner">
-        <div class="featured-wrapper">
-          <div class="featured-image reveal">
-            <figure class="lightbox-trigger" data-caption="Spirit Gathering - Cover Art">
-              <img src="otherPics/1)%20Anh%20Bia.png" alt="Spirit Gathering - Cover Art" loading="lazy">
-              <figcaption style="display: none;">Spirit Gathering</figcaption>
-            </figure>
-            <div class="img-placeholder">
-              <span class="img-placeholder-icon">🎴</span>
-              <span>Cover Art<br>Spirit Gathering</span>
-            </div>
-            <div class="featured-corner"></div>
-            <div class="featured-corner br"></div>
+        <div class="featured-image-top reveal">
+          <figure class="lightbox-trigger" data-caption="Spirit Gathering - Cover Art">
+            <img src="otherPics/1)%20Anh%20Bia.png" alt="Spirit Gathering - Cover Art" loading="lazy">
+            <figcaption style="display: none;">Spirit Gathering</figcaption>
+          </figure>
+          <div class="img-placeholder">
+            <span class="img-placeholder-icon">🎴</span>
+            <span>Cover Art<br>Spirit Gathering</span>
           </div>
+          <div class="featured-corner"></div>
+          <div class="featured-corner br"></div>
+        </div>
 
-          <div class="featured-content reveal reveal-delay-2">
-            <p class="featured-label">✦ Flagship Game</p>
-            <h2 class="featured-title">Spirit Gathering</h2>
-            <p class="featured-subtitle">Vietnamese Spiritual Boardgame</p>
+        <div class="featured-content reveal reveal-delay-1">
+            <p class="featured-label" data-en="✦ Flagship Game" data-vi="✦ Game Chính">✦ Flagship Game</p>
+            <h2 class="featured-title" data-en="Spirit Gathering" data-vi="Tập Hợp Linh Hồn">Spirit Gathering</h2>
+            <p class="featured-subtitle" data-en="Vietnamese Spiritual Boardgame" data-vi="Board Game Tâm Linh Việt Nam">Vietnamese Spiritual Boardgame</p>
 
             <div class="featured-specs">
               <div class="spec-item">
-                <span class="spec-label">Genre:</span>
-                <span class="spec-value">Strategic Card Boardgame</span>
+                <span class="spec-label" data-en="Genre:" data-vi="Thể loại:">Genre:</span>
+                <span class="spec-value" data-en="Strategic Card Boardgame" data-vi="Board Game Chiến Lược với Thẻ">Strategic Card Boardgame</span>
               </div>
               <div class="spec-item">
-                <span class="spec-label">Theme:</span>
-                <span class="spec-value">Vietnamese Spiritual Folklore</span>
+                <span class="spec-label" data-en="Theme:" data-vi="Chủ đề:">Theme:</span>
+                <span class="spec-value" data-en="Vietnamese Spiritual Folklore" data-vi="Dân Gian Tâm Linh Việt Nam">Vietnamese Spiritual Folklore</span>
               </div>
               <div class="spec-item">
-                <span class="spec-label">Players:</span>
-                <span class="spec-value">3-6</span>
+                <span class="spec-label" data-en="Players:" data-vi="Người chơi:">Players:</span>
+                <span class="spec-value" data-en="3-6" data-vi="3-6">3-6</span>
               </div>
               <div class="spec-item">
-                <span class="spec-label">Play Time:</span>
-                <span class="spec-value">15-45 minutes</span>
+                <span class="spec-label" data-en="Play Time:" data-vi="Thời gian chơi:">Play Time:</span>
+                <span class="spec-value" data-en="15-45 minutes" data-vi="15-45 phút">15-45 minutes</span>
               </div>
               <div class="spec-item">
-                <span class="spec-label">Age:</span>
-                <span class="spec-value">16+</span>
+                <span class="spec-label" data-en="Age:" data-vi="Tuổi:">Age:</span>
+                <span class="spec-value" data-en="16+" data-vi="16+">16+</span>
               </div>
               <div class="spec-item">
-                <span class="spec-label">Status:</span>
-                <span class="spec-value">Publisher Partnership</span>
+                <span class="spec-label" data-en="Status:" data-vi="Trạng thái:">Status:</span>
+                <span class="spec-value" data-en="Publisher Partnership" data-vi="Hợp Tác Nhà Xuất Bản">Publisher Partnership</span>
               </div>
               <div class="spec-item">
-                <span class="spec-label">Publisher:</span>
-                <span class="spec-value">Everjoy Publishing</span>
+                <span class="spec-label" data-en="Publisher:" data-vi="Nhà Xuất Bản:">Publisher:</span>
+                <span class="spec-value" data-en="Everjoy Publishing" data-vi="Everjoy Publishing">Everjoy Publishing</span>
               </div>
             </div>
 
-            <p class="featured-desc">
-              Become a Spirit Commander Exorcist with the power to capture demons and wield sacred charms to battle
+            <p class="featured-desc" data-en="Become a Spirit Commander Exorcist with the power to capture demons and wield sacred talismans to battle both evil spirits and rival exorcists in a cursed ancient village. Spirit Gathering is a strategic 16+ boardgame for 3-6 players, inspired by Vietnam's mystical spiritual world." data-vi="Trở thành Pháp Sư Chỉ Huy Linh Hồn với sức mạnh để bắt ác quỷ và sử dụng những bùa linh thiêng để chiến đấu với cả những linh hồn xấu và những pháp sư đối thủ khác trong một ngôi làng cổ bị nguyền rủa. Spirit Gathering là một trò chơi board game chiến lược 16+ cho 3-6 người chơi, được lấy cảm hứng từ thế giới tâm linh bí ẩn của Việt Nam.">
+              Become a Spirit Commander Exorcist with the power to capture demons and wield sacred talismans to battle
               both evil spirits and rival exorcists in a cursed ancient village. Spirit Gathering is a strategic 16+
               boardgame for 3-6 players, inspired by Vietnam's mystical spiritual world.
             </p>
 
             <p class="featured-desc">
               Step into a realm where the boundary between the living and the spirit world collapses. Use wisdom,
-              tactics, and spiritual power to capture demons, deploy traditional charms, and summon spirit soldiers
+              tactics, and spiritual power to capture demons, deploy traditional talismans, and summon spirit soldiers
               to dominate the spirit realm.
             </p>
 
@@ -303,10 +298,14 @@
             </div>
 
             <div class="featured-ctas">
-              <a href="#presskit" class="btn-primary">Read Full Press Kit</a>
-              <a href="#contact" class="btn-outline">Pre-Register Interest</a>
-            </div>
-          </div>
+              <a href="#presskit" class="btn-primary" data-en="Read Full Press Kit" data-vi="Đọc Toàn Bộ Bộ Tài Liệu">Read Full Press Kit</a>
+              <a href="#contact" class="btn-outline" data-en="Pre-Register Interest" data-vi="Đăng Ký Sở Thích Trước">Pre-Register Interest</a>
+            </div>        </div>
+
+        <div class="featured-video-section reveal reveal-delay-2">
+          <h3 class="video-section-title" data-en="Game Prototype Video" data-vi="Video Mẫu Game">Game Prototype Video</h3>
+          <div class="video-container">
+            <iframe class="video-embed" src="https://www.youtube.com/embed/a9TM-BQlS_w" title="Spirit Gathering Prototype" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          </div>
         </div>
       </div>
     </section>
@@ -316,8 +315,8 @@
     <section id="presskit" class="section-container presskit-section">
       <div class="section-inner presskit-inner">
         <div class="section-header reveal">
-          <span class="section-tag">✦ Press Kit</span>
-          <h2 class="section-title">Spirit Gathering: Official Press & Media Kit</h2>
+          <span class="section-tag" data-en="✦ Press Kit" data-vi="✦ Bộ Tài Liệu Báo Chí">✦ Press Kit</span>
+          <h2 class="section-title" data-en="Spirit Gathering: Official Press & Media Kit" data-vi="Spirit Gathering: Bộ Tài Liệu Báo Chí & Truyền Thông Chính Thức">Spirit Gathering: Official Press & Media Kit</h2>
           <div class="section-rule"></div>
         </div>
 
@@ -325,21 +324,21 @@
           <!-- Presskit Sidebar Navigation -->
           <aside class="presskit-sidebar reveal">
             <nav class="presskit-nav">
-              <button class="presskit-nav-toggle" aria-label="Toggle presskit sections" aria-expanded="false">
+              <button class="presskit-nav-toggle" aria-label="Toggle presskit sections" aria-expanded="false" data-en="☰ Sections" data-vi="☰ Các Phần">
                 ☰ Sections
               </button>
               <ul class="presskit-sections">
-                <li><a href="#pk-factsheet" class="presskit-link active">Factsheet</a></li>
-                <li><a href="#pk-elevator" class="presskit-link">Elevator Pitch</a></li>
-                <li><a href="#pk-description" class="presskit-link">About the Game</a></li>
-                <li><a href="#pk-features" class="presskit-link">Key Features</a></li>
-                <li><a href="#pk-lore" class="presskit-link">Lore & World</a></li>
-                <li><a href="#pk-gameplay" class="presskit-link">How to Play</a></li>
-                <li><a href="#pk-faq" class="presskit-link">FAQ</a></li>
-                <li><a href="#pk-gallery" class="presskit-link">Gallery</a></li>
-                <li><a href="#pk-logos" class="presskit-link">Logos & Branding</a></li>
-                <li><a href="#pk-downloads" class="presskit-link">Downloads</a></li>
-                <li><a href="#pk-contact" class="presskit-link">Press Contact</a></li>
+                <li><a href="#pk-factsheet" class="presskit-link active" data-en="Factsheet" data-vi="Bảng Dữ Liệu">Factsheet</a></li>
+                <li><a href="#pk-elevator" class="presskit-link" data-en="Elevator Pitch" data-vi="Elevator Pitch">Elevator Pitch</a></li>
+                <li><a href="#pk-description" class="presskit-link" data-en="About the Game" data-vi="Về Game">About the Game</a></li>
+                <li><a href="#pk-features" class="presskit-link" data-en="Key Features" data-vi="Tính Năng Chính">Key Features</a></li>
+                <li><a href="#pk-lore" class="presskit-link" data-en="Lore & World" data-vi="Lore & Thế Giới">Lore & World</a></li>
+                <li><a href="#pk-gameplay" class="presskit-link" data-en="How to Play" data-vi="Cách Chơi">How to Play</a></li>
+                <li><a href="#pk-faq" class="presskit-link" data-en="FAQ" data-vi="Câu Hỏi Thường Gặp">FAQ</a></li>
+                <li><a href="#pk-gallery" class="presskit-link" data-en="Gallery" data-vi="Thư Viện Hình Ảnh">Gallery</a></li>
+                <li><a href="#pk-logos" class="presskit-link" data-en="Logos & Branding" data-vi="Logo & Thương Hiệu">Logos & Branding</a></li>
+                <li><a href="#pk-downloads" class="presskit-link" data-en="Downloads" data-vi="Tải Xuống">Downloads</a></li>
+                <li><a href="#pk-contact" class="presskit-link" data-en="Press Contact" data-vi="Liên Hệ Báo Chí">Press Contact</a></li>
               </ul>
             </nav>
           </aside>
@@ -348,73 +347,72 @@
           <div class="presskit-content">
             <!-- Factsheet -->
             <div id="pk-factsheet" class="presskit-block reveal">
-              <h3 class="presskit-heading">Factsheet</h3>
+              <h3 class="presskit-heading" data-en="Factsheet" data-vi="Bảng Dữ Liệu">Factsheet</h3>
               <div class="factsheet-grid">
                 <div class="fact-item">
-                  <span class="fact-label">Developer:</span>
+                  <span class="fact-label" data-en="Developer:" data-vi="Nhà Phát Triển:">Developer:</span>
                   <span class="fact-value">Exorcist Studio / Team Thay Cung</span>
                 </div>
                 <div class="fact-item">
-                  <span class="fact-label">Author:</span>
+                  <span class="fact-label" data-en="Author:" data-vi="Tác Giả:">Author:</span>
                   <span class="fact-value">Exorcist Studio</span>
                 </div>
                 <div class="fact-item">
-                  <span class="fact-label">Game Title:</span>
+                  <span class="fact-label" data-en="Game Title:" data-vi="Tiêu Đề Game:">Game Title:</span>
                   <span class="fact-value">Spirit Gathering</span>
                 </div>
                 <div class="fact-item">
-                  <span class="fact-label">Genre:</span>
-                  <span class="fact-value">Strategic Card Boardgame</span>
+                  <span class="fact-label" data-en="Genre:" data-vi="Thể Loại:">Genre:</span>
+                  <span class="fact-value" data-en="Strategic Card Boardgame" data-vi="Board Game Thẻ Chiến Lược">Strategic Card Boardgame</span>
                 </div>
                 <div class="fact-item">
-                  <span class="fact-label">Theme:</span>
-                  <span class="fact-value">Spirit Commander Exorcists in Vietnam's Mystical Spiritual World</span>
+                  <span class="fact-label" data-en="Theme:" data-vi="Chủ Đề:">Theme:</span>
+                  <span class="fact-value" data-en="Spirit Commander Exorcists in Vietnam's Mystical Spiritual World" data-vi="Chủ Yếu Pháp Sư Đuổi Quỷ Trong Thế Giới Tâm Linh Thần Bí Của Việt Nam">Spirit Commander Exorcists in Vietnam's Mystical Spiritual World</span>
                 </div>
                 <div class="fact-item">
-                  <span class="fact-label">Platform:</span>
-                  <span class="fact-value">Physical Boardgame</span>
+                  <span class="fact-label" data-en="Platform:" data-vi="Nền Tảng:">Platform:</span>
+                  <span class="fact-value" data-en="Physical Boardgame" data-vi="Board Game Vật Lý">Physical Boardgame</span>
                 </div>
                 <div class="fact-item">
-                  <span class="fact-label">Players:</span>
+                  <span class="fact-label" data-en="Players:" data-vi="Người Chơi:">Players:</span>
                   <span class="fact-value">3-6</span>
                 </div>
                 <div class="fact-item">
-                  <span class="fact-label">Play Time:</span>
-                  <span class="fact-value">15-45 phút</span>
+                  <span class="fact-label" data-en="Play Time:" data-vi="Thời Gian Chơi:">Play Time:</span>
+                  <span class="fact-value" data-en="15-45 minutes" data-vi="15-45 phút">15-45 phút</span>
                 </div>
                 <div class="fact-item">
-                  <span class="fact-label">Age Rating:</span>
+                  <span class="fact-label" data-en="Age Rating:" data-vi="Độ Tuổi:">Age Rating:</span>
                   <span class="fact-value">16+</span>
                 </div>
                 <div class="fact-item">
-                  <span class="fact-label">Status:</span>
-                  <span class="fact-value">Publisher Partnership</span>
+                  <span class="fact-label" data-en="Status:" data-vi="Trạng Thái:">Status:</span>
+                  <span class="fact-value" data-en="Publisher Partnership" data-vi="Hợp Tác Với Nhà Xuất Bản">Publisher Partnership</span>
                 </div>
                 <div class="fact-item">
-                  <span class="fact-label">Partnership:</span>
-                  <span class="fact-value">Signed commercial partnership with Everjoy Publishing</span>
+                  <span class="fact-label" data-en="Partnership:" data-vi="Hợp Tác:">Partnership:</span>
+                  <span class="fact-value" data-en="Signed commercial partnership with Everjoy Publishing" data-vi="Ký kết hợp tác thương mại với Everjoy Publishing">Signed commercial partnership with Everjoy Publishing</span>
                 </div>
                 <div class="fact-item">
-                  <span class="fact-label">Publisher Partner:</span>
+                  <span class="fact-label" data-en="Publisher Partner:" data-vi="Nhà Xuất Bản Hợp Tác:">Publisher Partner:</span>
                   <span class="fact-value">Everjoy Publishing</span>
                 </div>
                 <div class="fact-item">
-                  <span class="fact-label">Release Year:</span>
+                  <span class="fact-label" data-en="Release Year:" data-vi="Năm Phát Hành:">Release Year:</span>
                   <span class="fact-value">2026-2027 (TBA)</span>
                 </div>
                 <div class="fact-item">
-                  <span class="fact-label">Unique Selling Point:</span>
-                  <span class="fact-value">Vietnam's first boardgame to deeply explore Spirit Commander Exorcist culture through dramatic, tactical gameplay</span>
+                  <span class="fact-label" data-en="Unique Selling Point:" data-vi="Điểm Bán Hàng Duy Nhất:">Unique Selling Point:</span>
+                  <span class="fact-value" data-en="Vietnam's first boardgame to deeply explore Spirit Commander Exorcist culture through dramatic, tactical gameplay" data-vi="Board game đầu tiên của Việt Nam khám phá sâu sắc văn hóa Pháp Sư Đuổi Quỷ thông qua gameplay chiến thuật kịch tính">Vietnam's first boardgame to deeply explore Spirit Commander Exorcist culture through dramatic, tactical gameplay</span>
                 </div>
               </div>
             </div>
 
             <!-- Elevator Pitch -->
             <div id="pk-elevator" class="presskit-block reveal">
-              <h3 class="presskit-heading">Elevator Pitch</h3>
-              <p class="presskit-text">
-                <strong>Spirit Gathering</strong> is a strategic card boardgame where 3-6 players become Spirit Commander
-                Exorcists in a cursed Vietnamese village. Capture demons, wield sacred charms, and summon spirit soldiers
+              <h3 class="presskit-heading" data-en="Elevator Pitch" data-vi="Elevator Pitch">Elevator Pitch</h3>
+              <p class="presskit-text" data-en="Spirit Gathering is a strategic card boardgame where 3-6 players become Spirit Commander Exorcists in a cursed Vietnamese village. Capture demons, wield sacred talismans, and summon spirit soldiers to battle evil spirits and rival exorcists alike. With a unique resurrection mechanic rooted in Vietnamese reincarnation beliefs, every death is a new tactical opportunity-not the end of your story." data-vi="Spirit Gathering là một board game thẻ chiến lược nơi 3-6 người chơi trở thành Pháp Sư Đuổi Quỷ Chỉ Huy trong một ngôi làng Việt Nam bị nguyền rủa. Bắt giữ quỷ, sử dụng bùa hộ mệnh thiêng liêng, và triệu hồi lính linh hồn để chiến đấu với linh hồn xấu và những pháp sư đối thủ. Với cơ chế sống lại độc đáo có gốc rễ từ niềm tin luân hồi Việt Nam, mỗi cái chết là một cơ hội chiến thuật mới - không phải là kết thúc câu chuyện của bạn."><strong>Spirit Gathering</strong> is a strategic card boardgame where 3-6 players become Spirit Commander
+                Exorcists in a cursed Vietnamese village. Capture demons, wield sacred talismans, and summon spirit soldiers
                 to battle evil spirits and rival exorcists alike. With a unique resurrection mechanic rooted in Vietnamese
                 reincarnation beliefs, every death is a new tactical opportunity-not the end of your story.
               </p>
@@ -422,21 +420,21 @@
 
             <!-- Description -->
             <div id="pk-description" class="presskit-block reveal">
-              <h3 class="presskit-heading">About the Game</h3>
-              <p class="presskit-text">
-                Become a Spirit Commander Exorcist with the power to capture demons and use sacred charms to fight
+              <h3 class="presskit-heading" data-en="About the Game" data-vi="Về Game">About the Game</h3>
+              <p class="presskit-text" data-en="Become a Spirit Commander Exorcist with the power to capture demons and use sacred talismans to fight both evil spirits and rival exorcists in a cursed ancient village. Spirit Gathering is a strategic 16+ boardgame for 3-6 players, inspired by Vietnam's mystical spiritual world." data-vi="Trở thành Pháp Sư Đuổi Quỷ Chỉ Huy với sức mạnh bắt giữ quỷ và sử dụng bùa thiêng liêng để chiến đấu với cả linh hồn xấu và pháp sư đối thủ trong một ngôi làng cổ đại bị nguyền rủa. Spirit Gathering là một board game chiến lược 16+ cho 3-6 người chơi, được lấy cảm hứng từ thế giới tâm linh thần bí của Việt Nam.">
+                Become a Spirit Commander Exorcist with the power to capture demons and use sacred talismans to fight
                 both evil spirits and rival exorcists in a cursed ancient village. Spirit Gathering is a strategic 16+
                 boardgame for 3-6 players, inspired by Vietnam's mystical spiritual world.
               </p>
-              <p class="presskit-text">
+              <p class="presskit-text" data-en="Step into the mystical world of Spirit Gathering, where the boundary between the living and the spirit realm gradually collapses. In a cursed ancient village, evil spirits have broken free from their seals, spreading fear and darkness over all living creatures. As Spirit Commander Exorcists, players must use wisdom, tactics, and spiritual power to capture demons, deploy traditional talismans, and summon spirit soldiers to gain control of the spirit realm." data-vi="Bước vào thế giới thần bí của Spirit Gathering, nơi ranh giới giữa các loài sống và vương quốc linh hồn dần sụp đổ. Trong một ngôi làng cổ đại bị nguyền rủa, các linh hồn xấu đã thoát khỏi những bảo mật của chúng, nó lan tỏa nỗi sợ hãi và bóng tối trên tất cả những sinh vật sống. Là những Pháp Sư Đuổi Quỷ Chỉ Huy, người chơi phải sử dụng sự khôn ngoan, chiến thuật và sức mạnh tâm linh để bắt giữ quỷ, triển khai bùa truyền thống, và triệu hồi lính linh hồn để kiểm soát vương quốc linh hồn.">
                 Step into the mystical world of Spirit Gathering, where the boundary between the living and the spirit
                 realm gradually collapses. In a cursed ancient village, evil spirits have broken free from their seals,
                 spreading fear and darkness over all living creatures. As Spirit Commander Exorcists, players must use
-                wisdom, tactics, and spiritual power to capture demons, deploy traditional charms, and summon spirit
+                wisdom, tactics, and spiritual power to capture demons, deploy traditional talismans, and summon spirit
                 soldiers to gain control of the spirit realm.
               </p>
-              <p class="presskit-text">
-                Each player possesses a unique set of skills, charms, and strategies, creating dramatic mind games
+              <p class="presskit-text" data-en="Each player possesses a unique set of skills, talismans, and strategies, creating dramatic mind games between exorcists. Players must not only confront dangerous evil spirits roaming the village, but also compete with each other to become the most powerful exorcist." data-vi="Mỗi người chơi sở hữu một bộ kỹ năng, bùa, và chiến lược độc đáo, tạo ra những trò chơi tinh thần kịch tính giữa những pháp sư. Người chơi không chỉ phải đối mặt với những linh hồn xấu nguy hiểm lang thang trong ngôi làng, mà còn phải cạnh tranh với nhau để trở thành pháp sư mạnh nhất.">
+                Each player possesses a unique set of skills, talismans, and strategies, creating dramatic mind games
                 between exorcists. Players must not only confront dangerous evil spirits roaming the village, but also
                 compete with each other to become the most powerful exorcist.
               </p>
@@ -444,56 +442,56 @@
 
             <!-- Key Features -->
             <div id="pk-features" class="presskit-block reveal">
-              <h3 class="presskit-heading">Key Features</h3>
+              <h3 class="presskit-heading" data-en="Key Features" data-vi="Tính Năng Chính">Key Features</h3>
               <ul class="features-list">
-                <li><strong>Law of Life and Death:</strong> Unlike many card boardgames where death means elimination,
+                <li data-en="Law of Life and Death: Unlike many card boardgames where death means elimination, Spirit Gathering allows players to resurrect after dying. This reduces early "out of game" frustration while creating dramatic comeback moments even at the brink of defeat. Inspired by Vietnamese reincarnation beliefs, death is not an endpoint but a transitional phase-spirits can be reborn carrying karma and influence from their previous life." data-vi="Luật Sinh Tử: Khác với nhiều board game thẻ bài nơi cái chết đồng nghĩa với bị loại, Spirit Gathering cho phép người chơi hồi sinh sau khi chết. Điều này giảm cảm giác bực bội khi bị loại sớm trong khi tạo ra những khoảnh khắc lội ngược dòng kịch tính dù đang đứng bên bờ thất bại. Lấy cảm hứng từ niềm tin luân hồi của Việt Nam, cái chết không phải điểm kết thúc mà là một giai đoạn chuyển tiếp - linh hồn có thể được tái sinh mang theo nghiệp chướng và ảnh hưởng từ kiếp trước."><strong>Law of Life and Death:</strong> Unlike many card boardgames where death means elimination,
                   Spirit Gathering allows players to resurrect after dying. This reduces early "out of game" frustration
                   while creating dramatic comeback moments even at the brink of defeat. Inspired by Vietnamese reincarnation
                   beliefs, death is not an endpoint but a transitional phase-spirits can be reborn carrying karma and
                   influence from their previous life.</li>
-                <li><strong>Vietnamese Spiritual Legends:</strong> Spirit Gathering brings players into Vietnam's spiritual
+                <li data-en="Vietnamese Spiritual Legends: Spirit Gathering brings players into Vietnam's spiritual world, where folk legend spirits and demons are vividly recreated through unique visual design, skills, and mechanics for each entity. Every demon carries its own story and cultural element-for example, Thần Trùng possesses the &quot;Trùng Tang&quot; effect, inspired by folk beliefs about consecutive deaths within a family." data-vi="Truyền Thuyết Tâm Linh Việt Nam: Spirit Gathering đưa người chơi vào thế giới tâm linh của Việt Nam, nơi các linh hồn và quỷ trong truyền thuyết dân gian được tái hiện sinh động qua thiết kế hình ảnh, kỹ năng và cơ chế độc đáo cho từng thực thể. Mỗi con quỷ đều mang câu chuyện và yếu tố văn hóa riêng - ví dụ như Thần Trùng sở hữu hiệu ứng &quot;Trùng Tang&quot;, lấy cảm hứng từ tín ngưỡng dân gian về những cái chết liên tiếp trong một gia đình."><strong>Vietnamese Spiritual Legends:</strong> Spirit Gathering brings players into Vietnam's spiritual
                   world, where folk legend spirits and demons are vividly recreated through unique visual design, skills,
                   and mechanics for each entity. Every demon carries its own story and cultural element-for example, Thần
                   Trùng possesses the "Trùng Tang" effect, inspired by folk beliefs about consecutive deaths within a
                   family.</li>
-                <li><strong>Spirit Commander Exorcist Roleplay:</strong> One of Spirit Gathering's standout features is
+                <li data-en="Spirit Commander Exorcist Roleplay: One of Spirit Gathering's standout features is its strong roleplay experience, where players become Spirit Commander Exorcists with the power to capture, subdue, and command demons. Through tactical planning, charm usage, and spirit control, players don't just fight to survive-they gradually expand their own spiritual authority." data-vi="Nhập Vai Pháp Sư Đuổi Quỷ Chỉ Huy: Một trong những tính năng nổi bật của Spirit Gathering là trải nghiệm nhập vai mạnh mẽ, nơi người chơi trở thành Pháp Sư Đuổi Quỷ Chỉ Huy với sức mạnh để bắt, trấn áp và chỉ huy quỷ dữ. Thông qua lập kế hoạch chiến thuật, sử dụng bùa chú và kiểm soát linh hồn, người chơi không chỉ chiến đấu để tồn tại mà dần dần mở rộng quyền uy tâm linh của bản thân."><strong>Spirit Commander Exorcist Roleplay:</strong> One of Spirit Gathering's standout features is
                   its strong roleplay experience, where players become Spirit Commander Exorcists with the power to
                   capture, subdue, and command demons. Through tactical planning, charm usage, and spirit control,
                   players don't just fight to survive-they gradually expand their own spiritual authority.</li>
-                <li><strong>Deep Vietnamese Cultural Identity:</strong> Unlike many strategy boardgames inspired by Western
-                  culture, Spirit Gathering builds its world on Vietnamese folk beliefs and spiritual legends-charms,
+                <li data-en="Deep Vietnamese Cultural Identity: Unlike many strategy boardgames inspired by Western culture, Spirit Gathering builds its world on Vietnamese folk beliefs and spiritual legends-talismans, spirit soldiers, reincarnation, and spiritual entities all developed from indigenous culture." data-vi="Bản Sắc Văn Hóa Việt Nam Sâu Sắc: Khác với nhiều board game chiến lược lấy cảm hứng từ văn hóa phương Tây, Spirit Gathering xây dựng thế giới của mình trên tín ngưỡng dân gian và truyền thuyết tâm linh Việt Nam - bùa phép, âm binh, luân hồi và các thực thể tâm linh đều được phát triển từ văn hóa bản địa."><strong>Deep Vietnamese Cultural Identity:</strong> Unlike many strategy boardgames inspired by Western
+                  culture, Spirit Gathering builds its world on Vietnamese folk beliefs and spiritual legends-talismans,
                   spirit soldiers, reincarnation, and spiritual entities all developed from indigenous culture.</li>
-                <li><strong>High Interactive Gameplay:</strong> Designed around continuous player interaction-from
-                  disrupting opponents' strategies and competing for spirits to using charms to shift the battlefield,
+                <li data-en="High Interactive Gameplay: Designed around continuous player interaction-from disrupting opponents' strategies and competing for spirits to using talismans to shift the battlefield, every action can directly affect the entire table." data-vi="Gameplay Tương Tác Cao: Được thiết kế xoay quanh sự tương tác liên tục giữa người chơi - từ phá vỡ chiến lược của đối thủ và cạnh tranh giành linh hồn đến dùng bùa phép để thay đổi chiến trường, mọi hành động đều có thể ảnh hưởng trực tiếp đến cả bàn chơi."><strong>High Interactive Gameplay:</strong> Designed around continuous player interaction-from
+                  disrupting opponents' strategies and competing for spirits to using talismans to shift the battlefield,
                   every action can directly affect the entire table.</li>
               </ul>
             </div>
 
             <!-- Lore & World -->
             <div id="pk-lore" class="presskit-block reveal">
-              <h3 class="presskit-heading">Lore & World Overview</h3>
-              <p class="presskit-text">
+              <h3 class="presskit-heading" data-en="Lore & World Overview" data-vi="Lore & Tổng Quan Thế Giới">Lore & World Overview</h3>
+              <p class="presskit-text" data-en="Deep within the forests and remote mountains of ancient Vietnam lies a forgotten village where the boundary between the underworld and the living realm gradually collapses. Once protected by guardian exorcists, the village fell into chaos after a forbidden ritual accidentally shattered the seal separating the spirit world." data-vi="Sâu trong những khu rừng và núi non xa xôi của Việt Nam cổ đại có một ngôi làng bị lãng quên nơi ranh giới giữa âm phủ và cõi dương dần sụp đổ. Từng được bảo vệ bởi những pháp sư trấn giữ, ngôi làng rơi vào hỗn loạn sau khi một nghi lễ bị cấm vô tình phá vỡ lá chắn ngăn cách thế giới tâm linh.">
                 Deep within the forests and remote mountains of ancient Vietnam lies a forgotten village where the
                 boundary between the underworld and the living realm gradually collapses. Once protected by guardian
                 exorcists, the village fell into chaos after a forbidden ritual accidentally shattered the seal separating
                 the spirit world.
               </p>
-              <p class="presskit-text">
+              <p class="presskit-text" data-en="From that moment, vengeful souls, evil spirits, and demons began to appear, bringing plague, omens, and mysterious deaths. The dead could not transcend, while the living existed in fear of ever-growing supernatural forces." data-vi="Từ khoảnh khắc đó, những linh hồn thù hận, tà ma và quỷ dữ bắt đầu xuất hiện, mang theo dịch bệnh, điềm báo và những cái chết bí ẩn. Người chết không thể siêu thoát, trong khi người sống tồn tại trong nỗi sợ hãi trước những thế lực siêu nhiên ngày càng lớn mạnh.">
                 From that moment, vengeful souls, evil spirits, and demons began to appear, bringing plague, omens, and
                 mysterious deaths. The dead could not transcend, while the living existed in fear of ever-growing
                 supernatural forces.
               </p>
-              <p class="presskit-text">
-                To prevent catastrophe, exorcists summoned Spirit Gathering-an army of souls bound by charms and spiritual
+              <p class="presskit-text" data-en="To prevent catastrophe, exorcists summoned Spirit Gathering-an army of souls bound by talismans and spiritual contracts. But such power always comes at a price. The more they wield the underworld's strength, the more exorcists are eroded by evil energy and gradually lose themselves." data-vi="Để ngăn chặn thảm họa, các pháp sư triệu tập Âm Binh - một đội quân linh hồn bị ràng buộc bởi bùa chú và giao ước tâm linh. Nhưng quyền năng như vậy luôn đi kèm một cái giá. Càng vận dụng sức mạnh từ âm phủ, các pháp sư càng bị năng lượng tà ác ăn mòn và dần đánh mất chính mình.">
+                To prevent catastrophe, exorcists summoned Spirit Gathering-an army of souls bound by talismans and spiritual
                 contracts. But such power always comes at a price. The more they wield the underworld's strength, the
                 more exorcists are eroded by evil energy and gradually lose themselves.
               </p>
-              <p class="presskit-text">
+              <p class="presskit-text" data-en="In Spirit Gathering, players become Spirit Commander Exorcists entering the cursed village to subdue spirits and command demons. But amid the battle against evil spirits, exorcists must also confront each other to seize supreme power between the two realms of life and death-and become the strongest exorcist." data-vi="Trong Spirit Gathering, người chơi trở thành Pháp Sư Đuổi Quỷ Chỉ Huy bước vào ngôi làng bị nguyền rủa để trấn áp linh hồn và chỉ huy quỷ dữ. Nhưng giữa cuộc chiến chống lại tà ma, các pháp sư cũng phải đối mặt với nhau để giành quyền lực tối cao giữa hai cõi âm dương - và trở thành pháp sư mạnh nhất.">
                 In Spirit Gathering, players become Spirit Commander Exorcists entering the cursed village to subdue
                 spirits and command demons. But amid the battle against evil spirits, exorcists must also confront each
                 other to seize supreme power between the two realms of life and death-and become the strongest exorcist.
               </p>
-              <p class="presskit-text">
+              <p class="presskit-text" data-en="Inspired by Vietnamese folk beliefs and spiritual legends, Spirit Gathering delivers a mystical world where death is not the end, but only the beginning of a new cycle of reincarnation." data-vi="Lấy cảm hứng từ tín ngưỡng dân gian và truyền thuyết tâm linh Việt Nam, Spirit Gathering mang đến một thế giới huyền bí nơi cái chết không phải là kết thúc, mà chỉ là khởi đầu của một chu kỳ luân hồi mới.">
                 Inspired by Vietnamese folk beliefs and spiritual legends, Spirit Gathering delivers a mystical world
                 where death is not the end, but only the beginning of a new cycle of reincarnation.
               </p>
@@ -501,114 +499,114 @@
 
             <!-- How to Play -->
             <div id="pk-gameplay" class="presskit-block reveal">
-              <h3 class="presskit-heading">How to Play (Overview)</h3>
-              <p class="presskit-text">
+              <h3 class="presskit-heading" data-en="How to Play (Overview)" data-vi="Cách Chơi (Tổng Quan)">How to Play (Overview)</h3>
+              <p class="presskit-text" data-en="Setup: 3-6 players each take on the role of a Spirit Commander Exorcist with a unique skill set, charm cards, and tactical approach. The cursed village board becomes the contested battlefield where spirits and exorcists clash." data-vi="Thiết Lập: 3-6 người chơi mỗi người đảm nhận vai Pháp Sư Đuổi Quỷ Chỉ Huy với bộ kỹ năng, bùa chú và cách tiếp cận chiến thuật độc đáo. Bàn cờ ngôi làng bị nguyền rủa trở thành chiến trường tranh chấp nơi các linh hồn và pháp sư đối đầu.">
                 <strong>Setup:</strong> 3-6 players each take on the role of a Spirit Commander Exorcist with a unique
                 skill set, charm cards, and tactical approach. The cursed village board becomes the contested battlefield
                 where spirits and exorcists clash.
               </p>
-              <p class="presskit-text">
+              <p class="presskit-text" data-en="Gameplay Loop: On your turn, you may:" data-vi="Vòng Chơi: Đến lượt mình, bạn có thể:">
                 <strong>Gameplay Loop:</strong> On your turn, you may:
               </p>
               <ul class="features-list">
-                <li>Deploy charm cards and summon spirit soldiers onto the village board</li>
-                <li>Capture and subdue demons, converting their power into combat tools</li>
-                <li>Use traditional Vietnamese charms to activate special abilities and shift the battlefield</li>
-                <li>Compete with rival exorcists for control of spirits and territory</li>
-                <li>When defeated, resurrect through the Law of Life and Death-carrying karma from your previous life into a new tactical opportunity</li>
+                <li data-en="Deploy talisman cards and summon spirit soldiers onto the village board" data-vi="Triển khai thẻ bùa phép và triệu hồi âm binh lên bàn cờ ngôi làng">Deploy talisman cards and summon spirit soldiers onto the village board</li>
+                <li data-en="Capture and subdue demons, converting their power into combat tools" data-vi="Bắt và trấn áp quỷ dữ, chuyển đổi sức mạnh của chúng thành vũ khí chiến đấu">Capture and subdue demons, converting their power into combat tools</li>
+                <li data-en="Use traditional Vietnamese talismans to activate special abilities and shift the battlefield" data-vi="Sử dụng bùa phép truyền thống Việt Nam để kích hoạt các kỹ năng đặc biệt và thay đổi chiến trường">Use traditional Vietnamese talismans to activate special abilities and shift the battlefield</li>
+                <li data-en="Compete with rival exorcists for control of spirits and territory" data-vi="Cạnh tranh với các pháp sư đối thủ để kiểm soát linh hồn và lãnh thổ">Compete with rival exorcists for control of spirits and territory</li>
+                <li data-en="When defeated, resurrect through the Law of Life and Death-carrying karma from your previous life into a new tactical opportunity" data-vi="Khi bị đánh bại, hồi sinh qua Luật Sinh Tử - mang nghiệp chướng từ kiếp trước vào một cơ hội chiến thuật mới">When defeated, resurrect through the Law of Life and Death-carrying karma from your previous life into a new tactical opportunity</li>
               </ul>
-              <p class="presskit-text">
+              <p class="presskit-text" data-en="Victory Conditions: Win by subduing the most powerful spirits, dominating the spirit realm, and outlasting rival exorcists. The player who masters both demon capture and spiritual warfare emerges as the supreme Spirit Commander Exorcist." data-vi="Điều Kiện Chiến Thắng: Giành chiến thắng bằng cách trấn áp những linh hồn mạnh nhất, thống trị cõi âm và vượt qua các pháp sư đối thủ. Người chơi thành thạo cả việc bắt quỷ lẫn chiến tranh tâm linh sẽ trở thành Pháp Sư Đuổi Quỷ Chỉ Huy tối thượng.">
                 <strong>Victory Conditions:</strong> Win by subduing the most powerful spirits, dominating the spirit
                 realm, and outlasting rival exorcists. The player who masters both demon capture and spiritual warfare
                 emerges as the supreme Spirit Commander Exorcist.
               </p>
-              <p class="presskit-text">
+              <p class="presskit-text" data-en="What Makes It Different: The resurrection mechanic keeps all players engaged until the final moment. High player interaction-from sabotaging opponents to competing for spirits-ensures every game is tense, unpredictable, and full of dramatic reversals." data-vi="Điều Gì Làm Nó Khác Biệt: Cơ chế hồi sinh giữ cho tất cả người chơi tham gia đến phút cuối. Sự tương tác cao giữa người chơi - từ phá hoại đối thủ đến tranh giành linh hồn - đảm bảo mỗi ván đấu đều căng thẳng, khó đoán và đầy những pha lội ngược dòng kịch tính.">
                 <strong>What Makes It Different:</strong> The resurrection mechanic keeps all players engaged until the
                 final moment. High player interaction-from sabotaging opponents to competing for spirits-ensures every
                 game is tense, unpredictable, and full of dramatic reversals.
               </p>
-              <p class="presskit-text">
+              <p class="presskit-text" data-en="For detailed rules, please refer to the rulebook in the Downloads section." data-vi="Để biết luật chi tiết, vui lòng tham khảo sách hướng dẫn trong phần Tải Xuống.">
                 <em>For detailed rules, please refer to the rulebook in the Downloads section.</em>
               </p>
             </div>
 
             <!-- FAQ -->
             <div id="pk-faq" class="presskit-block reveal">
-              <h3 class="presskit-heading">FAQ</h3>
+              <h3 class="presskit-heading" data-en="FAQ" data-vi="Câu Hỏi Thường Gặp">FAQ</h3>
               <div class="faq-list">
                 <div class="faq-item">
-                  <p class="presskit-text"><strong>How many players is the game for?</strong></p>
-                  <p class="presskit-text">Spirit Gathering is designed for groups of 3-6 players, and becomes more engaging as more exorcists join the table.</p>
+                  <p class="presskit-text" data-en="How many players is the game for?" data-vi="Game dành cho bao nhiêu người chơi?"><strong>How many players is the game for?</strong></p>
+                  <p class="presskit-text" data-en="Spirit Gathering is designed for groups of 3-6 players, and becomes more engaging as more exorcists join the table." data-vi="Spirit Gathering được thiết kế cho nhóm 3-6 người chơi, và trở nên hấp dẫn hơn khi càng nhiều pháp sư tham gia bàn chơi.">Spirit Gathering is designed for groups of 3-6 players, and becomes more engaging as more exorcists join the table.</p>
                 </div>
                 <div class="faq-item">
-                  <p class="presskit-text"><strong>How long does a game of Spirit Gathering last?</strong></p>
-                  <p class="presskit-text">Each game is expected to last 15-45 phút depending on the number of players and strategies used.</p>
+                  <p class="presskit-text" data-en="How long does a game of Spirit Gathering last?" data-vi="Một ván Spirit Gathering kéo dài bao lâu?"><strong>How long does a game of Spirit Gathering last?</strong></p>
+                  <p class="presskit-text" data-en="Each game is expected to last 15-45 minutes depending on the number of players and strategies used." data-vi="Mỗi ván dự kiến kéo dài 15-45 phút tùy thuộc vào số lượng người chơi và chiến lược được sử dụng.">Each game is expected to last 15-45 phút depending on the number of players and strategies used.</p>
                 </div>
                 <div class="faq-item">
-                  <p class="presskit-text"><strong>Why did you take inspiration from Vietnamese culture?</strong></p>
-                  <p class="presskit-text">We wanted to create a boardgame with a distinct Vietnamese identity rather than using familiar Western settings. Vietnamese spiritual culture and folk legends offer many unique elements perfectly suited for a tactical, roleplay-driven boardgame world. We also hope to introduce Vietnamese culture to domestic and international boardgame communities in a modern, accessible way.</p>
+                  <p class="presskit-text" data-en="Why did you take inspiration from Vietnamese culture?" data-vi="Tại sao bạn lấy cảm hứng từ văn hóa Việt Nam?"><strong>Why did you take inspiration from Vietnamese culture?</strong></p>
+                  <p class="presskit-text" data-en="We wanted to create a boardgame with a distinct Vietnamese identity rather than using familiar Western settings. Vietnamese spiritual culture and folk legends offer many unique elements perfectly suited for a tactical, roleplay-driven boardgame world. We also hope to introduce Vietnamese culture to domestic and international boardgame communities in a modern, accessible way." data-vi="Chúng tôi muốn tạo ra một board game mang bản sắc Việt Nam riêng biệt thay vì sử dụng bối cảnh phương Tây quen thuộc. Văn hóa tâm linh và truyền thuyết dân gian Việt Nam cung cấp nhiều yếu tố độc đáo hoàn toàn phù hợp với thế giới board game chiến thuật, nhập vai. Chúng tôi cũng hy vọng giới thiệu văn hóa Việt Nam đến cộng đồng board game trong nước và quốc tế theo cách hiện đại, dễ tiếp cận.">We wanted to create a boardgame with a distinct Vietnamese identity rather than using familiar Western settings. Vietnamese spiritual culture and folk legends offer many unique elements perfectly suited for a tactical, roleplay-driven boardgame world. We also hope to introduce Vietnamese culture to domestic and international boardgame communities in a modern, accessible way.</p>
                 </div>
                 <div class="faq-item">
-                  <p class="presskit-text"><strong>Why does the game have a resurrection mechanic?</strong></p>
-                  <p class="presskit-text">The resurrection mechanic in Spirit Gathering is built on the concept of reincarnation in Vietnamese spiritual culture, where death is not an absolute end but a transitional phase. In gameplay, this keeps players from being eliminated, removes the frustration of waiting for a new game, and creates opportunities for dramatic comebacks-keeping matches tense, competitive, and interactive until the very end.</p>
+                  <p class="presskit-text" data-en="Why does the game have a resurrection mechanic?" data-vi="Tại sao game có cơ chế hồi sinh?"><strong>Why does the game have a resurrection mechanic?</strong></p>
+                  <p class="presskit-text" data-en="The resurrection mechanic in Spirit Gathering is built on the concept of reincarnation in Vietnamese spiritual culture, where death is not an absolute end but a transitional phase. In gameplay, this keeps players from being eliminated, removes the frustration of waiting for a new game, and creates opportunities for dramatic comebacks-keeping matches tense, competitive, and interactive until the very end." data-vi="Cơ chế hồi sinh trong Spirit Gathering được xây dựng dựa trên khái niệm luân hồi trong văn hóa tâm linh Việt Nam, nơi cái chết không phải là kết thúc tuyệt đối mà là một giai đoạn chuyển tiếp. Trong gameplay, điều này giữ người chơi không bị loại, loại bỏ sự bực bội khi phải đợi ván mới và tạo ra cơ hội lội ngược dòng kịch tính - giữ cho các ván đấu căng thẳng, cạnh tranh và tương tác đến phút chót.">The resurrection mechanic in Spirit Gathering is built on the concept of reincarnation in Vietnamese spiritual culture, where death is not an absolute end but a transitional phase. In gameplay, this keeps players from being eliminated, removes the frustration of waiting for a new game, and creates opportunities for dramatic comebacks-keeping matches tense, competitive, and interactive until the very end.</p>
                 </div>
                 <div class="faq-item">
-                  <p class="presskit-text"><strong>What makes Spirit Gathering different from other boardgames?</strong></p>
-                  <p class="presskit-text">Spirit Gathering stands out through its exploration of Vietnamese folk beliefs and spiritual culture, combined with resurrection mechanics, spirit subjugation, and demon control-creating a unique tactical experience rich in roleplay.</p>
+                  <p class="presskit-text" data-en="What makes Spirit Gathering different from other boardgames?" data-vi="Điều gì làm Spirit Gathering khác biệt với các board game khác?"><strong>What makes Spirit Gathering different from other boardgames?</strong></p>
+                  <p class="presskit-text" data-en="Spirit Gathering stands out through its exploration of Vietnamese folk beliefs and spiritual culture, combined with resurrection mechanics, spirit subjugation, and demon control-creating a unique tactical experience rich in roleplay." data-vi="Spirit Gathering nổi bật qua việc khám phá tín ngưỡng dân gian và văn hóa tâm linh Việt Nam, kết hợp cơ chế hồi sinh, trấn áp linh hồn và kiểm soát quỷ dữ - tạo nên một trải nghiệm chiến thuật độc đáo giàu yếu tố nhập vai.">Spirit Gathering stands out through its exploration of Vietnamese folk beliefs and spiritual culture, combined with resurrection mechanics, spirit subjugation, and demon control-creating a unique tactical experience rich in roleplay.</p>
                 </div>
                 <div class="faq-item">
-                  <p class="presskit-text"><strong>Is Spirit Gathering accessible to new boardgame players?</strong></p>
-                  <p class="presskit-text">Spirit Gathering is designed so both newcomers and experienced boardgamers can enjoy it. The rule system is clear but offers enough tactical depth for high competitiveness and replayability.</p>
+                  <p class="presskit-text" data-en="Is Spirit Gathering accessible to new boardgame players?" data-vi="Spirit Gathering có thân thiện với người mới chơi board game không?"><strong>Is Spirit Gathering accessible to new boardgame players?</strong></p>
+                  <p class="presskit-text" data-en="Spirit Gathering is designed so both newcomers and experienced boardgamers can enjoy it. The rule system is clear but offers enough tactical depth for high competitiveness and replayability." data-vi="Spirit Gathering được thiết kế để cả người mới lẫn game thủ board game có kinh nghiệm đều có thể thưởng thức. Hệ thống luật rõ ràng nhưng mang đủ chiều sâu chiến thuật cho tính cạnh tranh cao và khả năng chơi lại tốt.">Spirit Gathering is designed so both newcomers and experienced boardgamers can enjoy it. The rule system is clear but offers enough tactical depth for high competitiveness and replayability.</p>
                 </div>
                 <div class="faq-item">
-                  <p class="presskit-text"><strong>Where can players follow the latest updates?</strong></p>
-                  <p class="presskit-text">Follow our <a href="https://www.facebook.com/profile.php?id=61577123348348" target="_blank">Facebook fanpage</a> or visit <a href="https://exorciststudio.com" target="_blank">exorciststudio.com</a> for updates on development progress and release timing.</p>
+                  <p class="presskit-text" data-en="Where can players follow the latest updates?" data-vi="Người chơi có thể theo dõi cập nhật mới nhất ở đâu?"><strong>Where can players follow the latest updates?</strong></p>
+                  <p class="presskit-text" data-en="Follow our Facebook fanpage or visit exorciststudio.com for updates on development progress and release timing." data-vi="Theo dõi fanpage Facebook của chúng tôi hoặc truy cập exorciststudio.com để cập nhật tiến độ phát triển và thời điểm phát hành.">Follow our <a href="https://www.facebook.com/profile.php?id=61577123348348" target="_blank">Facebook fanpage</a> or visit <a href="https://exorciststudio.com" target="_blank">exorciststudio.com</a> for updates on development progress and release timing.</p>
                 </div>
                 <div class="faq-item">
-                  <p class="presskit-text"><strong>Has the game been released yet?</strong></p>
-                  <p class="presskit-text">Spirit Gathering is currently in publisher partnership with Everjoy Publishing, with a planned release window of 2026-2027 (TBA).</p>
+                  <p class="presskit-text" data-en="Has the game been released yet?" data-vi="Game đã được phát hành chưa?"><strong>Has the game been released yet?</strong></p>
+                  <p class="presskit-text" data-en="Spirit Gathering is currently in publisher partnership with Everjoy Publishing, with a planned release window of 2026-2027 (TBA)." data-vi="Spirit Gathering hiện đang trong quan hệ đối tác xuất bản với Everjoy Publishing, với cửa sổ phát hành dự kiến là 2026-2027 (TBA).">Spirit Gathering is currently in publisher partnership with Everjoy Publishing, with a planned release window of 2026-2027 (TBA).</p>
                 </div>
               </div>
             </div>
 
             <!-- Gallery -->
             <div id="pk-gallery" class="presskit-block reveal">
-              <h3 class="presskit-heading">Gallery</h3>
+              <h3 class="presskit-heading" data-en="Gallery" data-vi="Thư Viện Hình Ảnh">Gallery</h3>
               <div class="gallery-grid">
                 <figure class="gallery-item lightbox-trigger" data-caption="Spirit Gathering Cover Art">
                   <img src="otherPics/1)%20Anh%20Bia.png" alt="Spirit Gathering Cover Art" loading="lazy">
-                  <figcaption>Cover Art</figcaption>
+                  <figcaption data-en="Cover Art" data-vi="Bìa Đáy">Cover Art</figcaption>
                 </figure>
                 <figure class="gallery-item lightbox-trigger" data-caption="Game Board Layout">
                   <img src="otherPics/2)%20Board%20Setup.png" alt="Game Board Layout" loading="lazy">
-                  <figcaption>Game Board</figcaption>
+                  <figcaption data-en="Game Board" data-vi="Bàn Game">Game Board</figcaption>
                 </figure>
                 <figure class="gallery-item lightbox-trigger" data-caption="Spirit Cards">
                   <img src="otherPics/3)%20La%20Am%20Binh.png" alt="Spirit Cards" loading="lazy">
-                  <figcaption>Spirit Cards</figcaption>
+                  <figcaption data-en="Spirit Cards" data-vi="Thẻ Linh Hồn">Spirit Cards</figcaption>
                 </figure>
                 <figure class="gallery-item lightbox-trigger" data-caption="Game Components">
                   <img src="assets/gallery/components.jpg" alt="Game Components" loading="lazy">
-                  <figcaption>Components</figcaption>
+                  <figcaption data-en="Components" data-vi="Các Thành Phần">Components</figcaption>
                 </figure>
                 <figure class="gallery-item lightbox-trigger" data-caption="Gameplay in Action">
                   <img src="otherPics/7)%20People%20Playing%20the%20Game%201.jpg" alt="Gameplay in Action" loading="lazy">
-                  <figcaption>Gameplay</figcaption>
+                  <figcaption data-en="Gameplay" data-vi="Mối Tràn Chơi">Gameplay</figcaption>
                 </figure>
                 <figure class="gallery-item lightbox-trigger" data-caption="Box Art & Packaging">
                   <img src="assets/gallery/box-art.jpg" alt="Box Art & Packaging" loading="lazy">
-                  <figcaption>Box Art</figcaption>
+                  <figcaption data-en="Box Art" data-vi="Nghệ Thuật Hp">Box Art</figcaption>
                 </figure>
               </div>
               <p class="gallery-note">
-                <em>All placeholder images. For media inquiries and high-resolution assets, contact nguyenphathuy0123@teamthaycung.com</em>
+                <em data-en="All placeholder images. For media inquiries and high-resolution assets, contact nguyenphathuy0123@teamthaycung.com" data-vi="Tất cả ảnh chầu. Để liên hệ báo chí và tài sản độ phân ćo cao, vui lòng liên hệ nguyenphathuy0123@teamthaycung.com">All placeholder images. For media inquiries and high-resolution assets, contact nguyenphathuy0123@teamthaycung.com</em>
               </p>
             </div>
 
             <!-- Logos & Branding -->
             <div id="pk-logos" class="presskit-block reveal">
-              <h3 class="presskit-heading">Logos & Branding</h3>
-              <p class="presskit-text">
+              <h3 class="presskit-heading" data-en="Logos & Branding" data-vi="Logo & Thương Hiệu">Logos & Branding</h3>
+              <p class="presskit-text" data-en="Official logos and branding guidelines are available in the Downloads section. All assets are provided for press, review, and media use." data-vi="Logo chính thức và hướng dẫn branding có sẵn trong phần Tải Xuống. Tất cả tài sản được cung cấp để sử dụng trong báo chí, đánh giá và truyền thông.">
                 Official logos and branding guidelines are available in the Downloads section. All assets are provided
                 for press, review, and media use.
               </p>
@@ -636,70 +634,70 @@
 
             <!-- Downloads -->
             <div id="pk-downloads" class="presskit-block reveal">
-              <h3 class="presskit-heading">Downloads</h3>
-              <p class="presskit-text">
+              <h3 class="presskit-heading" data-en="Downloads" data-vi="Tải Xuống">Downloads</h3>
+              <p class="presskit-text" data-en="All press kit materials, screenshots, logos, and documentation are available for download below. For media inquiries, interviews, or review copies, please contact us." data-vi="Tất cả các tài liệu bộ báo chí, ảnh chụp màn hình, logo và tài liệu có sẵn để tải xuống dưới đây. Để liên hệ báo chí, phỏng vấn hoặc bản sao đánh giá, vui lòng liên hệ với chúng tôi.">
                 All press kit materials, screenshots, logos, and documentation are available for download below.
                 For media inquiries, interviews, or review copies, please contact us.
               </p>
               <div class="downloads-grid">
                 <a href="https://drive.google.com/file/d/1vkBhHiZdnJfEKG2WSOMfV1ejY8OKreN4/view?usp=sharing" class="download-card" download>
                   <span class="download-icon">📦</span>
-                  <span class="download-name">Full Press Kit & Resources</span>
-                  <span class="download-size">Complete assets (ZIP)</span>
+                  <span class="download-name" data-en="Full Press Kit & Resources" data-vi="Bộ Thư Viện Báo Chí Đầy Đủ & Tài Nguyên">Full Press Kit & Resources</span>
+                  <span class="download-size" data-en="Complete assets (ZIP)" data-vi="Tài sản hoàn chỉnh (ZIP)">Complete assets (ZIP)</span>
                 </a>
                 <a href="Screenshots&amp;Gallery.zip" class="download-card" download>
                   <span class="download-icon">📸</span>
-                  <span class="download-name">Screenshots & Gallery</span>
-                  <span class="download-size">High-res images (ZIP)</span>
+                  <span class="download-name" data-en="Screenshots & Gallery" data-vi="Các ảnh Chụp Màn Hình & Thư Viện">Screenshots & Gallery</span>
+                  <span class="download-size" data-en="High-res images (ZIP)" data-vi="Hình ảnh Độ Phân Cao (ZIP)">High-res images (ZIP)</span>
                 </a>
                 <a href="Logo&amp;Branding.zip" class="download-card" download>
                   <span class="download-icon">🎨</span>
-                  <span class="download-name">Logos & Branding</span>
-                  <span class="download-size">PNG, SVG assets (ZIP)</span>
+                  <span class="download-name" data-en="Logos & Branding" data-vi="Logo & Thương Hiệu">Logos & Branding</span>
+                  <span class="download-size" data-en="PNG, SVG assets (ZIP)" data-vi="Tài sản PNG, SVG (ZIP)">PNG, SVG assets (ZIP)</span>
                 </a>
                 <a href="https://drive.google.com/file/d/1UKf_T_L4aMzsH1_OT0Mht2WEViI9Rnef/view?usp=sharing" class="download-card" download>
                   <span class="download-icon">🎲</span>
-                  <span class="download-name">Spirit Gathering Game Kit</span>
-                  <span class="download-size">Game materials (ZIP)</span>
+                  <span class="download-name" data-en="Spirit Gathering Game Kit" data-vi="Bộ Kit Game Spirit Gathering">Spirit Gathering Game Kit</span>
+                  <span class="download-size" data-en="Game materials (ZIP)" data-vi="Vật Liệu Game (ZIP)">Game materials (ZIP)</span>
                 </a>
                 <a href="Am_Binh_Fact_Sheet.pdf" class="download-card" download>
                   <span class="download-icon">📄</span>
-                  <span class="download-name">Factsheet PDF</span>
-                  <span class="download-size">One-page overview (PDF)</span>
+                  <span class="download-name" data-en="Factsheet PDF" data-vi="PDF Bảng Dữ Liệu">Factsheet PDF</span>
+                  <span class="download-size" data-en="One-page overview (PDF)" data-vi="Tổng Quan Một Trang (PDF)">One-page overview (PDF)</span>
                 </a>
               </div>
               <p class="download-note">
-                <em>If files are not yet available, contact nguyenphathuy0123@teamthaycung.com to request assets.</em>
+                <em data-en="If files are not yet available, contact nguyenphathuy0123@teamthaycung.com to request assets." data-vi="Nếu tập tin chưa có sẵn, vui lòng liên hệ nguyenphathuy0123@teamthaycung.com để yêu cầu tài sản.">If files are not yet available, contact nguyenphathuy0123@teamthaycung.com to request assets.</em>
               </p>
             </div>
 
             <!-- Press Contact -->
             <div id="pk-contact" class="presskit-block reveal">
-              <h3 class="presskit-heading">Press Contact</h3>
-              <p class="presskit-text">
+              <h3 class="presskit-heading" data-en="Press Contact" data-vi="Liên Hệ Báo Chí">Press Contact</h3>
+              <p class="presskit-text" data-en="For media inquiries, review copies, interviews, or feature opportunities:" data-vi="Để liên hệ báo chí, bản sao đánh giá, phỏng vấn hoặc cơ hội đặc trưng:">
                 For media inquiries, review copies, interviews, or feature opportunities:
               </p>
               <div class="contact-details">
                 <div class="contact-line">
-                  <span class="contact-label">Email:</span>
+                  <span class="contact-label" data-en="Email:" data-vi="Email:">Email:</span>
                   <a href="mailto:nguyenphathuy0123@teamthaycung.com">nguyenphathuy0123@teamthaycung.com</a>
                 </div>
                 <div class="contact-line">
-                  <span class="contact-label">Director Contact:</span>
+                  <span class="contact-label" data-en="Director Contact:" data-vi="Liên Hệ Giám Đốc:">Director Contact:</span>
                   <a href="mailto:huynp@yanglakes.com">huynp@yanglakes.com</a>
                 </div>
                 <div class="contact-line">
-                  <span class="contact-label">Website:</span>
+                  <span class="contact-label" data-en="Website:" data-vi="Trang Web:">Website:</span>
                   <a href="https://exorciststudio.com" target="_blank">exorciststudio.com</a>
                 </div>
                 <div class="contact-line">
-                  <span class="contact-label">Fanpage:</span>
+                  <span class="contact-label" data-en="Fanpage:" data-vi="Trang Fanpage:">Fanpage:</span>
                   <a href="https://www.facebook.com/profile.php?id=61577123348348" target="_blank">Spirit Gathering on Facebook</a>
                 </div>
               </div>
 
-              <h4 class="presskit-subheading">About Everjoy Publishing</h4>
-              <p class="presskit-text">
+              <h4 class="presskit-subheading" data-en="About Everjoy Publishing" data-vi="Về Everjoy Publishing">About Everjoy Publishing</h4>
+              <p class="presskit-text" data-en="Everjoy Publishing is one of Southeast Asia's leading game publishers, dedicated to bringing innovative tabletop experiences to players across the region and beyond. Their commercial partnership with Exorcist Studio marks a significant milestone in bringing Vietnamese spiritual culture to the global boardgame market." data-vi="Everjoy Publishing là một trong những nhà xuất bản trò chơi hàng đầu của Đông Nam Á, tận tâm mang đến những trải nghiệm bàn board game sáng tạo cho những người chơi trên khắp khu vực và xa hơn. Hợp tác thương mại của họ với Exorcist Studio đánh dấu một cột mốc quan trọng trong việc mang văn hóa tâm linh Việt Nam đến thị trường board game toàn cầu.">
                 Everjoy Publishing is one of Southeast Asia's leading game publishers, dedicated to bringing innovative
                 tabletop experiences to players across the region and beyond. Their commercial partnership with Exorcist
                 Studio marks a significant milestone in bringing Vietnamese spiritual culture to the global boardgame market.
@@ -716,33 +714,33 @@
     <section id="team" class="section-container">
       <div class="section-inner">
         <div class="section-header reveal">
-<span class="section-tag">✦ Team</span>
-          <h2 class="section-title">The Team Behind Spirit Gathering</h2>
+          <span class="section-tag" data-en="✦ Team" data-vi="✦ Đội Ngũ">✦ Team</span>
+          <h2 class="section-title" data-en="The Team Behind Spirit Gathering" data-vi="Đội Ngũ Đằng Sau Tập Hợp Linh Hồn">The Team Behind Spirit Gathering</h2>
           <div class="section-rule"></div>
         </div>
 
         <!-- Founder Spotlight -->
         <div class="founder-spotlight reveal">
-          <div class="founder-avatar">
+          <div class="founder-banner">
             <figure class="lightbox-trigger" data-caption="Nguyễn Phát Huy - Founder & CEO">
-              <img src="memberPics/huy-avatar.jpg" alt="Nguyễn Phát Huy, Founder & CEO" loading="lazy">
+              <img src="memberPics/huy-avatar.jpg" alt="Nguyễn Phát Huy, Founder & CEO" loading="lazy"
+                onerror="this.style.display='none';this.closest('.founder-banner').querySelector('.avatar-placeholder').style.display='flex'">
               <figcaption style="display: none;">Nguyễn Phát Huy</figcaption>
             </figure>
             <div class="avatar-placeholder">
               <span class="avatar-icon">👤</span>
-              <span>Founder<br>Avatar</span>
+              <span>Founder</span>
             </div>
           </div>
           <div class="founder-info">
-            <p class="founder-label">✦ Founder & Creative Director</p>
+            <p class="founder-label" data-en="✦ Founder & Creative Director" data-vi="✦ Nhà Sáng Lập & Giám Đốc Sáng Tạo">✦ Founder & Creative Director</p>
             <h3 class="founder-name">Nguyễn Phát Huy</h3>
-            <p class="founder-title">Game Design · Narrative Design · RMIT University</p>
-            <p class="founder-bio">
-              Visionary game designer and cultural storyteller. Huy founded Team Thay Cung to bridge Vietnamese
+            <p class="founder-title" data-en="Game Design · Narrative Design · RMIT University" data-vi="Thiết Kế Game · Thiết Kế Trượng Sự · Đại Học RMIT">Game Design · Narrative Design · RMIT University</p>
+            <p class="founder-bio" data-en="Visionary game designer and cultural storyteller. Huy founded Team Thay Cung to bridge Vietnamese spiritual heritage and modern gaming. His philosophy: games are modern rituals connecting players to culture, history, and each other." data-vi="Nhà thiết kế trò chơi tưưng lai và nhà kể chuyện văn hóa. Huy thành lập Team Thay Cung để kết nối di sản tâm linh Việt Nam và trò chơi hiện đại. Triết lý của anh: trò chơi là những nghi lễ hiện đại kết nối người chơi với văn hóa, lịch sử và nháu.">Visionary game designer and cultural storyteller. Huy founded Team Thay Cung to bridge Vietnamese
               spiritual heritage and modern gaming. His philosophy: games are modern rituals connecting players to
               culture, history, and each other.
             </p>
-            <p class="founder-quote">
+            <p class="founder-quote" data-en="\"Vietnam's spiritual world is rich and unique, no less compelling than the famous narratives of Thailand or Japan, and it deserves to be known by more people.\"" data-vi="\"Thế giới tâm linh của Việt Nam là phùng phú và duy nhất, không kém điểu so với những trương sự nổi tiếng của Thái Lan hay Nhật Bản, và nó nên được nhiều người biết đến.\"">
               "Vietnam's spiritual world is rich and unique, no less compelling than the famous narratives of Thailand
               or Japan, and it deserves to be known by more people."
             </p>
@@ -764,7 +762,8 @@
           <div class="team-card reveal reveal-delay-1">
             <div class="team-avatar">
               <figure class="lightbox-trigger" data-caption="Cao Nguyễn Minh Thảo - Art Director">
-                <img src="memberPics/thao-avatar.jpg" alt="Cao Nguyễn Minh Thảo, Art Director" loading="lazy">
+                <img src="memberPics/thao-avatar.jpg" alt="Cao Nguyễn Minh Thảo, Art Director" loading="lazy"
+                  onerror="this.style.display='none';this.closest('.team-avatar').querySelector('.avatar-placeholder').style.display='flex'">
                 <figcaption style="display: none;">Cao Nguyễn Minh Thảo</figcaption>
               </figure>
               <div class="avatar-placeholder">
@@ -773,11 +772,10 @@
               </div>
             </div>
             <div class="team-info">
-              <p class="team-role">Art Director</p>
+              <p class="team-role" data-en="Art Director" data-vi="Giám Đốc Nghệ Thuật">Art Director</p>
               <h3 class="team-name">Cao Nguyễn Minh Thảo</h3>
-              <p class="team-major">Digital Media Design · RMIT University</p>
-              <p class="team-bio">
-                Visual architect of the spirit realm. Thảo translates Vietnamese folklore into haunting, evocative
+              <p class="team-major" data-en="Digital Media Design · RMIT University" data-vi="Thiết Kế Đa Phương Tiện Kỹ Thuật Số · Đại Học RMIT">Digital Media Design · RMIT University</p>
+              <p class="team-bio" data-en="Visual architect of the spirit realm. Thảo translates Vietnamese folklore into haunting, evocative artwork that captures the mystery and darkness of the spiritual world." data-vi="Kiến trúc sư hình ảnh của vương quốc linh hồn. Thảo dịch dây cùng dân Việt Nam thành những tác phẩm nghệ thuật rợn rộn, ành hưởng lớn mà nắm bắt được bí ẩn và bóng tối của thế giới tâm linh.">Visual architect of the spirit realm. Thảo translates Vietnamese folklore into haunting, evocative
                 artwork that captures the mystery and darkness of the spiritual world.
               </p>
               <div class="team-links">
@@ -795,7 +793,8 @@
           <div class="team-card reveal reveal-delay-2">
             <div class="team-avatar">
               <figure class="lightbox-trigger" data-caption="Bùi Minh Duy - Marketing & Partnerships">
-                <img src="memberPics/duy-avatar.jpg" alt="Bùi Minh Duy, Marketing & Partnerships" loading="lazy">
+                <img src="memberPics/duy-avatar.jpg" alt="Bùi Minh Duy, Marketing & Partnerships" loading="lazy"
+                  onerror="this.style.display='none';this.closest('.team-avatar').querySelector('.avatar-placeholder').style.display='flex'">
                 <figcaption style="display: none;">Bùi Minh Duy</figcaption>
               </figure>
               <div class="avatar-placeholder">
@@ -804,11 +803,10 @@
               </div>
             </div>
             <div class="team-info">
-              <p class="team-role">Marketing & Partnerships</p>
+              <p class="team-role" data-en="Marketing & Partnerships" data-vi="Márkếting & Hợp Tác">Marketing & Partnerships</p>
               <h3 class="team-name">Bùi Minh Duy</h3>
-              <p class="team-major">Logistics & Operations · RMIT University</p>
-              <p class="team-bio">
-                Global connector. Duy bridges Team Thay Cung with publishers, press, players, and collaborators
+              <p class="team-major" data-en="Logistics & Operations · RMIT University" data-vi="Hậu Cấp & Vận Hành · Đại Học RMIT">Logistics & Operations · RMIT University</p>
+              <p class="team-bio" data-en="Global connector. Duy bridges Team Thay Cung with publishers, press, players, and collaborators worldwide. Master of brand storytelling and strategic partnerships." data-vi="Người kết nối toàn cầu. Duy cầu nối Team Thay Cung với nhà xuất bản, báo chí, người chơi và các cộng tác viên trên toàn thế giới. Chuyên gia kế chuyện thương hiệu và hợp tác chiến lược.">Global connector. Duy bridges Team Thay Cung with publishers, press, players, and collaborators
                 worldwide. Master of brand storytelling and strategic partnerships.
               </p>
               <div class="team-links">
@@ -826,7 +824,8 @@
           <div class="team-card reveal reveal-delay-3">
             <div class="team-avatar">
               <figure class="lightbox-trigger" data-caption="Nguyễn Chí Đạt - IT Lead & Tech Development">
-                <img src="memberPics/dat-avatar.jpg" alt="Nguyễn Chí Đạt, IT Lead & Tech Development" loading="lazy">
+                <img src="memberPics/dat-avatar.jpg" alt="Nguyễn Chí Đạt, IT Lead & Tech Development" loading="lazy"
+                  onerror="this.style.display='none';this.closest('.team-avatar').querySelector('.avatar-placeholder').style.display='flex'">
                 <figcaption style="display: none;">Nguyễn Chí Đạt</figcaption>
               </figure>
               <div class="avatar-placeholder">
@@ -835,11 +834,10 @@
               </div>
             </div>
             <div class="team-info">
-              <p class="team-role">IT Lead & Tech Development</p>
+              <p class="team-role" data-en="IT Lead & Tech Development" data-vi="Trưởng Đội CNTT & Phát Triển Kỹ Thuật">IT Lead & Tech Development</p>
               <h3 class="team-name">Nguyễn Chí Đạt</h3>
-              <p class="team-major">Information Technology · RMIT University</p>
-              <p class="team-bio">
-                Technical architect behind Spirit Gathering's digital presence. Đạt manages infrastructure, platform development,
+              <p class="team-major" data-en="Information Technology · RMIT University" data-vi="Công Nghệ Thông Tin · Đại Học RMIT">Information Technology · RMIT University</p>
+              <p class="team-bio" data-en="Technical architect behind Spirit Gathering's digital presence. Đạt manages infrastructure, platform development, and ensures seamless technical execution across all studio projects." data-vi="Kiến trúc sư kỹ thuật đằng sau sự hiện diện kỹ thuật số của Spirit Gathering. Đạt quản lý cơ sở hạt tầng, phát triển nền tảng và đảm bảo thực hiện kỹ thuật linh hoạt trên tất cả các dự án studio.">Technical architect behind Spirit Gathering's digital presence. Đạt manages infrastructure, platform development,
                 and ensures seamless technical execution across all studio projects.
               </p>
               <div class="team-links">
@@ -863,28 +861,28 @@
     <section id="contact" class="section-container contact-section">
       <div class="section-inner">
         <div class="section-header reveal">
-<span class="section-tag">✦ Contact</span>
-          <h2 class="section-title">Connect With Us</h2>
+          <span class="section-tag" data-en="✦ Contact" data-vi="✦ Liên Hệ">✦ Contact</span>
+          <h2 class="section-title" data-en="Connect With Us" data-vi="Kết Nối Với Chúng Tôi">Connect With Us</h2>
           <div class="section-rule"></div>
         </div>
 
         <div class="contact-wrapper">
           <div class="contact-intro reveal">
-            <p>
+            <p data-en="Whether you're a publisher, journalist, collaborator, or player-we're here to share our story and hear yours." data-vi="Cho dù bạn là nhà xuất bản, nhà báo, cộng tác viên hay người chơi - chúng tôi ở đây để chia sẻ câu chuyện của chúng tôi và lắng nghe của bạn.">
               Whether you're a publisher, journalist, collaborator, or player-we're here to share our story and hear yours.
             </p>
           </div>
 
           <div class="contact-grid reveal reveal-delay-1">
             <div class="contact-box">
-              <h4 class="contact-box-title">Direct Contact</h4>
+              <h4 class="contact-box-title" data-en="Direct Contact" data-vi="Liên Hệ Trực Tiếp">Direct Contact</h4>
               <a href="mailto:nguyenphathuy0123@teamthaycung.com" class="contact-link">
                 <span class="contact-icon">✉</span>
                 <span>nguyenphathuy0123@teamthaycung.com</span>
               </a>
             </div>
             <div class="contact-box">
-              <h4 class="contact-box-title">Connect</h4>
+              <h4 class="contact-box-title" data-en="Connect" data-vi="Kết Nối">Connect</h4>
               <div class="social-links">
                 <a href="https://exorciststudio.com" target="_blank" class="social-link" title="Website">
                   <span>exorciststudio.com</span>
@@ -898,27 +896,27 @@
 
           <form id="contact-form" class="contact-form reveal reveal-delay-2">
             <div class="form-group">
-              <label for="form-name" class="form-label">Your Name *</label>
+              <label for="form-name" class="form-label" data-en="Your Name *" data-vi="Tên Của Bạn *">Your Name *</label>
               <input type="text" id="form-name" class="form-input" placeholder="Full name" required>
             </div>
 
             <div class="form-group">
-              <label for="form-email" class="form-label">Your Email *</label>
+              <label for="form-email" class="form-label" data-en="Your Email *" data-vi="Email Của Bạn *">Your Email *</label>
               <input type="email" id="form-email" class="form-input" placeholder="your@email.com" required>
             </div>
 
             <div class="form-group">
-              <label for="form-subject" class="form-label">Subject *</label>
+              <label for="form-subject" class="form-label" data-en="Subject *" data-vi="Chủ Đề *">Subject *</label>
               <input type="text" id="form-subject" class="form-input" placeholder="What's this about?" required>
             </div>
 
             <div class="form-group">
-              <label for="form-message" class="form-label">Message *</label>
+              <label for="form-message" class="form-label" data-en="Message *" data-vi="Tin Nhắn *">Message *</label>
               <textarea id="form-message" class="form-textarea" placeholder="Your message..." rows="6"
                 required></textarea>
             </div>
 
-            <button type="submit" class="btn-primary" id="submit-btn">Send Message →</button>
+            <button type="submit" class="btn-primary" id="submit-btn" data-en="Send Message →" data-vi="Gửi Tin Nhắn →">Send Message →</button>
             <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
           </form>
         </div>

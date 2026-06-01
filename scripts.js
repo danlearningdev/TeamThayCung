@@ -198,3 +198,108 @@ document.getElementById('submit-btn')?.addEventListener('click', () => {
   });
 if (valid) alert('Thank you! Your message has been received. We will get in touch with you as soon as possible.');
 });
+
+// ─── LANGUAGE TOGGLE (Vietnamese/English) ─────────────────────────────────
+const langToggle = document.getElementById('language-toggle');
+const currentLang = localStorage.getItem('language') || 'en';
+let isVietnamese = currentLang === 'vi';
+
+const translations = {
+  'vi': {
+    // Navigation
+    'Home': 'Trang Chủ',
+    'About Us': 'Về Chúng Tôi',
+    'Achievements': 'Thành Tích',
+    'Spirit Gathering': 'Tập Hợp Linh Hồn',
+    'Press Kit': 'Bộ Tài Liệu',
+    'Team': 'Đội Ngũ',
+    'Contact': 'Liên Hệ',
+    
+    // Hero
+    'RMIT University · Boardgame Design Studio': 'Đại học RMIT · Studio Thiết kế Board Game',
+    'Team\nThầy Cúng': 'Team\nThầy Cúng',
+    'Vietnamese Folklore Boardgame Studio': 'Studio Board Game Dân gian Việt Nam',
+    'We are Exorcist Studio, a game design team from RMIT University. We create strategic boardgames and digital experiences rooted in Vietnamese spiritual folklore, rituals, and spiritual culture. Every game is a séance, every decision is a prayer.': 'Chúng tôi là Exorcist Studio, một đội thiết kế game từ Đại học RMIT. Chúng tôi tạo ra những trò chơi board game chiến lược và trải nghiệm kỹ thuật số có gốc rễ trong dân gian tâm linh, nghi lễ và văn hóa tâm linh Việt Nam. Mỗi trò chơi là một buổi cầu hồn, mỗi quyết định là một lời cầu nguyện.',
+    'Explore Spirit Gathering': 'Khám Phá Tập Hợp Linh Hồn',
+    'View Press Kit': 'Xem Bộ Tài Liệu',
+    'Cuộn xuống': 'Cuộn xuống',
+    
+    // About
+    '✦ About Us': '✦ Về Chúng Tôi',
+    'Team Thay Cung / Exorcist Studio': 'Team Thay Cung / Exorcist Studio',
+    'Who We Are': 'Chúng Tôi Là Ai',
+    'Team Thay Cung (Exorcist Studio) is a Vietnamese boardgame design studio dedicated to creating games that celebrate and explore Vietnamese spiritual culture, folklore, and rituals.': 'Team Thay Cung (Exorcist Studio) là một studio thiết kế board game Việt Nam tập trung vào tạo ra những trò chơi tôn vinh và khám phá văn hóa tâm linh, dân gian và nghi lễ Việt Nam.',
+    'Our Mission': 'Sứ Mệnh Của Chúng Tôi',
+    'We bring Vietnamese spiritual heritage closer to the world through immersive tabletop and digital games. We believe folklore is not just history-it\'s an endless source of storytelling, strategy, and human connection. Through our games, we honor ancestral traditions while creating modern, engaging experiences.': 'Chúng tôi mang di sản tâm linh Việt Nam gần hơn với thế giới thông qua những trò chơi bàn và kỹ thuật số đắm chìm. Chúng tôi tin rằng dân gian không chỉ là lịch sử - nó là một nguồn vô tận của kỳ tích, chiến lược và kết nối con người. Thông qua các trò chơi của chúng tôi, chúng tôi tôn vinh truyền thống tổ tiên trong khi tạo ra những trải nghiệm hiện đại, hấp dẫn.',
+    'Our Vision': 'Tầm Nhìn Của Chúng Tôi',
+    'To establish Vietnamese boardgame design as a distinctive voice in the global gaming industry, rooted in authentic cultural narratives and ritual aesthetics. We aspire to export Vietnamese spiritual worldviews through games that are mechanically rich, narratively deep, and culturally resonant.': 'Thiết lập thiết kế board game Việt Nam như một giọng nói độc đáo trong ngành công nghiệp game toàn cầu, có gốc rễ trong các câu chuyện văn hóa xác thực và thẩm mỹ nghi lễ. Chúng tôi khao khát xuất khẩu thế giới quan tâm linh Việt Nam thông qua những trò chơi giàu cơ chế, sâu sắc về tường thuật và cộng hưởng về mặt văn hóa.',
+    'Based at:': 'Có trụ sở tại:',
+    'Founded:': 'Thành lập:',
+    'Studio Size:': 'Kích thước Studio:',
+    'Core team of 4 passionate designers and creators': 'Đội ngũ cốt lõi 4 nhà thiết kế và người sáng tạo đam mê',
+    'Strategic Design': 'Thiết Kế Chiến Lược',
+    'Complex, rewarding mechanics rooted in Vietnamese cultural symbolism.': 'Cơ chế phức tạp và xứng đáng có gốc rễ trong biểu tượng văn hóa Việt Nam.',
+    'Folklore-First': 'Dân Gian Đầu Tiên',
+    'Authentic cultural narratives, not shallow aesthetics.': 'Các câu chuyện văn hóa xác thực, không phải thẩm mỹ nông cạn.',
+    'Community-Driven': 'Hướng Tới Cộng Đồng',
+    'Games designed to bring people together through shared ritual and story.': 'Các trò chơi được thiết kế để đoàn kết mọi người thông qua nghi lễ và câu chuyện chung.',
+    
+    // Achievements
+    '✦ Achievements': '✦ Thành Tích',
+    'Our Journey': 'Hành Trình Của Chúng Tôi',
+  }
+};
+
+// Initialize language on page load
+if (isVietnamese) {
+  langToggle.querySelector('.lang-text').textContent = 'VI';
+  translatePage(true);
+} else {
+  langToggle.querySelector('.lang-text').textContent = 'EN';
+}
+
+function translatePage(toVi) {
+  document.querySelectorAll('[data-en]').forEach(el => {
+    // Skip parent containers whose children also have data-en (let children handle themselves)
+    if (el.querySelector('[data-en]')) return;
+
+    // Save original innerHTML the first time (preserves <a>, <strong>, etc.)
+    if (!el.dataset.originalHtml) {
+      el.dataset.originalHtml = el.innerHTML;
+    }
+
+    if (toVi) {
+      const viText = el.dataset.vi || el.dataset.en;
+      el.textContent = viText;
+    } else {
+      // Restore the original HTML (with links, bold tags intact)
+      el.innerHTML = el.dataset.originalHtml;
+    }
+  });
+}
+
+langToggle.addEventListener('click', () => {
+  isVietnamese = !isVietnamese;
+  localStorage.setItem('language', isVietnamese ? 'vi' : 'en');
+  
+  langToggle.querySelector('.lang-text').textContent = isVietnamese ? 'VI' : 'EN';
+  translatePage(isVietnamese);
+});
+
+// ─── SCROLL TO TOP BUTTON ──────────────────────────────────────────
+const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollToTopBtn.classList.add('visible');
+  } else {
+    scrollToTopBtn.classList.remove('visible');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
