@@ -311,12 +311,13 @@ body::before {
 }
 
 .nav-logo-img {
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
-  border-radius: 6px;
-  filter: drop-shadow(0 0 10px rgba(201, 168, 76, 0.25));
+  border-radius: 8px;
+  filter: drop-shadow(0 0 14px rgba(201, 168, 76, 0.3));
 }
+
 
 .nav-logo .logo-text {
   display: inline-block;
@@ -2261,9 +2262,12 @@ content: '🔍 View Image';
   }
 
   .nav-logo-img {
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 12px rgba(201, 168, 76, 0.28));
   }
+
 
   .presskit-sidebar {
     position: static;
